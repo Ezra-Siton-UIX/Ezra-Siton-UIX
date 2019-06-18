@@ -17,7 +17,7 @@
 				$label_en: 'About'
 			},
 			{
-				label: 'תיק עבודות',
+				label: 'עבודות',
 				link: '/he/portfolio',
 				new_window: false,
 				is_parent: true,
