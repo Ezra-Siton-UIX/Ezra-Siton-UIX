@@ -45,7 +45,7 @@
 				$link_en: '/en/portfolio'
 			},
 			{
-				label: 'תחומי התמחות',
+				label: 'התמחויות',
 				link: '/he/services-page-list',
 				new_window: false,
 				is_service: true,
