@@ -1,0 +1,85 @@
+{{>head}}
+<!--plugins-->
+{{>fancybox-css}}
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" >
+	{{#>body}}
+
+	{{>service_main_area}}
+
+	<aside>
+		<div class="wow uk-section uk-section-primary uk-text-center">
+			<h2>אשמח לשמוע על הפרוייקט שלכם</h2>
+			<a href="/{{global.language}}/contact" class="uk-button uk-button-secondary uk-button-large">
+				צור קשר
+			</a>
+		</div>
+	</aside>
+
+	<!-- footer -->
+	{{>footer}}
+	<!-- scripts -->
+	{{>uikit}}
+	{{>jquery}}
+	{{>fancybox}}
+
+
+		<!-- initialize -->
+		<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function() {
+		  // Active Service_sub_menu - לא עובד כרגע כי אין בכלל תפריט עליון עם לינקים //
+		  function setActive4() {
+		    aObj = document.getElementById('sub_menu').getElementsByTagName('a');
+		    currentPath = window.location.pathname;
+		    for(i=0;i<aObj.length;i++) {
+		      if(aObj[i].getAttribute('href') == currentPath && aObj[i].parentElement.tagName == 'LI') {
+		        aObj[i].parentElement.className='uk-active';
+		      }
+		    }
+		  };
+
+			/* אחרי לקרוא לפונקציה שיהיו לינקים *ץ */
+
+			// Active Service_sub_menu //
+			function setActive5() {
+				aObj = document.getElementById('nav-desktop').getElementsByTagName('a');
+				currentPath = window.location.pathname;
+				for(i=0;i<aObj.length;i++) {
+					if(aObj[i].getAttribute('href') == currentPath) {
+						aObj[i].parentElement.className='uk-active';
+						aObj[i].parentElement.parentElement.parentElement.parentElement.className='uk-active';
+					}
+				}
+			};
+
+			// fancybox3 for gallery //
+			$('[data-fancybox]').fancybox({
+				hash     : true,
+				infobar : true,
+				arrows : true,
+				buttons : [
+					'close'
+				],
+				thumbs : {
+					autoStart: false
+				},
+				mobile : {
+					thumbs : {
+						autoStart: false
+					}
+				},
+				loop : true,
+				transitionEffect  : "fade",
+
+				clickContent : function( current, event ) {
+					return current.type === 'image' ? 'next' : false;
+				},
+			});
+
+		});
+
+
+		</script>
+
+		{{/body}}

@@ -1,0 +1,65 @@
+{{>head}}
+<link rel="canonical" href="{{global.base_url}}/{{global.language}}/{{_meta.pagename}}" />
+
+<!--plugins-->
+{{>fancybox-css}}
+{{>swiper-css}}
+{{>vegas-css}}
+</head>
+<body itemscope itemtype="http://schema.org/CollectionPage" style="background: #f8f8f8;">
+	{{#>body}}
+	<!-- *******************************************************
+	CONTENT START HER
+	******************************************************* -->
+	<!-- Breadcrumb -->
+	<nav class="uk-container uk-container-large uk-margin-bottom">
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="uk-breadcrumb uk-margin-small-top">
+			<li itemprop="itemListElement" itemscope	itemtype="http://schema.org/ListItem">
+				<a itemscope itemtype="http://schema.org/Thing" itemprop="item"  href="/{{global.language}}" data-uk-tooltip="pos: bottom" title="חזרה למסך הראשי">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24">
+						<g class="nc-icon-wrapper" fill="#999999">
+							<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+						</g>
+					</svg>
+					<span itemprop="name">{{global.home_label_name}}</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/{{global.language}}/{{_meta.pagename}}"> <span itemprop="name">{{seo.title}}</span></a>
+				<meta itemprop="position" content="2" />
+			</li>
+		</ol>
+	</nav>
+
+<h1 class="uk-text-center">{{seo.title}}</h1>
+	<main id="main" class="uk-container uk-container-large uk-margin-large-bottom" data-uk-height-viewport="offset-top: true">
+		<ul class="uk-text-center  uk-margin-top uk-grid" data-uk-grid>
+			{{#each page_list}}
+			<li class="uk-width-1-2@m uk-margin-small-bottom">
+				<div class="uk-card uk-card-small uk-card-default">
+					<a  title="{{this.heading}}" href="/{{this.language}}/portfolio/{{this.href}}">
+						<div class="uk-card-media-top">
+							<div class="uk-inline-clip uk-transition-toggle">
+								<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="{{this.category_image}}" alt="{{this.alt}}">
+							</div>
+						</div>
+						<div class="uk-card-body">
+							<h2 class="">
+								{{this.heading}}
+							</h2>
+						</div>
+					</a>
+				</div>
+			</li>
+			{{/each}} <!-- end each -->
+		</ul>
+	</main>
+
+	<!-- footer -->
+	{{>footer}}
+	<!-- scripts -->
+	{{>uikit}}
+
+
+	{{/body}}<!-- הסוגר של זה בטמפלט של בודי -->

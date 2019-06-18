@@ -1,0 +1,287 @@
+{{>head}}
+<link rel="canonical" href="{{global.base_url}}/{{global.language}}/portfolio/{{_meta.pagename}}" />
+
+<!--plugins-->
+{{>fancybox-css}}
+
+<style>
+html{
+	background:#f3f3f3;
+}
+a.mixitup-control-active{
+	border-bottom: 5px solid;
+	color: #222;
+	border-color: #1e87f0;
+	background: #eeeeee;
+}
+
+.uk-subnav .mixitup-control-active{
+	text-decoration: none;
+	border-bottom: 2px solid;
+	color: #222;
+	border-color: #1e87f0;
+	background: #eeeeee;
+}
+
+.uk-button-group .uk-button{
+
+	line-height: 1.2;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+</style>
+
+<script>
+
+var totalOffset;
+
+window.addEventListener('load', function() {
+  //get the element
+  var elem = document.getElementById('main');
+  //get the distance scrolled on body (by default can be changed)
+  var distanceScrolled = document.body.scrollTop;
+  //create viewport offset object
+  var elemRect = elem.getBoundingClientRect();
+  //get the offset from the element to the viewport
+  var elemViewportOffset = elemRect.top;
+  //add them together
+  totalOffset = distanceScrolled + elemViewportOffset - 100;
+  //log it, (look at the top of this example snippet)
+});
+
+/* TO TOP */
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+	document.body.scrollTop = totalOffset;
+	document.documentElement.scrollTop = totalOffset;
+};
+
+</script>
+
+</head>
+<body id="top" itemscope itemtype="http://schema.org/ImageGallery">
+	{{#>body}}
+	{{>inside_header}}
+
+	<!-- Breadcrumb -->
+	<div class="uk-hidden2" style="padding: 2px 0;">
+		<nav class="uk-container uk-container-large"  itemprop="breadcrumb"  >
+			<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="uk-breadcrumb uk-margin-small-top">
+				<li itemprop="itemListElement" itemscope	itemtype="http://schema.org/ListItem">
+					<a itemscope itemtype="http://schema.org/Thing" itemprop="item"  href="/{{global.language}}" data-uk-tooltip="pos: bottom" title="{{global.breadcrumbs_back_to_main}}">
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24">
+							<g class="nc-icon-wrapper" fill="#999999">
+								<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+							</g>
+						</svg>
+						<span itemprop="name">
+							{{global.home_label_name}}
+						</span>
+					</a>
+					<meta itemprop="position" content="1" />
+				</li>
+				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+					<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/{{global.language}}/portfolio/" data-uk-tooltip="pos: bottom" title="{{seo.parent_page}}">
+						<span itemprop="name">
+							{{seo.parent_page}}
+						</span>
+					</a>
+					<meta itemprop="position" content="2" />
+				</li>
+				<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+					<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/{{global.language}}/portfolio/{{_meta.pagename}}" data-uk-tooltip="pos: bottom" title="{{seo.page_name}}">
+						<span itemprop="name">
+							{{seo.page_name}}
+						</span>
+					</a>
+					<meta itemprop="position" content="3" />
+				</li>
+			</ol>
+		</nav>
+	</div>
+
+	<h1 class="uk-hidden uk-text-center">{{seo.parent_page}}</h1>
+
+
+
+	<!-- sub-menu -->
+	<section class="uk-container uk-container-large uk-margin-bottom uk-margin-top">
+		<div class="uk-button-group">
+			<!-- Web design btn -->
+			<a class="uk-button uk-button-primary uk-margin-small-bottom" href="/{{global.language}}/portfolio/web-design-uix">
+				{{global.mainmenu.items.[2].child.[0].label}}
+			</a>
+			<!-- grphic design btn לזכור שזה לא דינמי מועד לבאגים אם אשנה משהו באתר-->
+			<a class="uk-button uk-button-default  uk-margin-small-bottom uk-margin-small-{{global.right_on_rtl_left_on_ltr}}" href="/{{global.language}}/portfolio/graphic-design" >
+				{{global.mainmenu.items.[2].child.[1].label}}
+			</a>
+		</div>
+	</section>
+
+	<!-- TOP ||| Swiper Gallery with lightbox -->
+	<section class="uk-container uk-conta2iner-large uk-section uk-section-small uk-padding-remove-top  uk-hidden@m">
+		<div uk-slideshow="animation: push">
+
+			<div class="uk-position-relative uk-visible-toggle uk-light">
+
+				<ul class="uk-slideshow-items" style="cursor: e-resize;">
+
+					{{#each gallery}}
+					<li>
+						<div class="uk-position-cover">
+							<img src="/assets/img/webdesign/{{this.file_name}}" alt="" uk-cover>
+						</div>
+						<div class="uk-hidden uk-position-bottom  uk-background-secondary uk-padding-small uk-light">
+							<h3 class="uk-margin-remove">Bottom</h3>
+							<p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
+					</li>
+					{{/each}}<!--/end each gallery -->
+				</ul>
+
+				<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+
+				<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+			</div>
+			<ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+		</div>
+	</section>
+
+
+	<main id="main" class="uk-container uk-container-large  uk-section uk-section-default uk-margin-large-bottom uk-margin-top">
+		<!--sort by menu -->
+		<ul class="controls uk-tab  uk-margin  uk-visible@m">
+			<span class="uk-margin-small-{{global.left_on_rtl_right_on_ltr}}">{{sort_by}}:</span>
+			<li><a type="button" class="control uk-b2utton" data-filter="all">All</a></li>
+			{{#each categories}}
+			<li><a type="button" class="control uk-butt2on" data-filter=".{{this.name}}">{{this.name}}</a></li>
+			{{/each}}<!-- / end each categories -->
+		</ul>
+
+
+		<h2 hidden class="uk-h1 uk-hidden uk-heading-line uk-text-right uk-margin-small-top uk-heading-bullet"><strong>{{seo.page_name}}</strong></h2>
+
+		<ul id="container" class="uk-grid uk-margin-large uk-margin-xlarge-bottom"
+    data-uk-grid="masonry: true"
+		data-uk-padding data-uk-scrollspy="target: > li; cls:uk-animation-fade; delay: 22">
+			{{#each gallery}}
+			<li class="mix uk-width-1-2@m {{this.category.name}} uk-margin-small-bottom">
+				<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+					<a itemprop="contentUrl"  data-type="image" data-width="{{this.data_width}}" data-height="{{this.data_height}}" data-fancybox="web-design" href="/assets/img/webdesign/{{this.file_name}}">
+						<div class="uk-inline-clip uk-transition-toggle">
+							<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/800w/{{this.file_name}}"
+							alt="{{this.figcaption}}"  />
+						</div>
+					</a>
+					<!-- image metadata -->
+					<meta itemprop="width" content="{{this.width}}">
+					<meta itemprop="height" content="{{this.height}}">
+					<meta itemprop="fileFormat" content="jpeg">
+					<!-- figcaption -->
+					<figcaption class="uk-display-inline-block uk-text-small uk-margin-small-top uk-margin-remove-bottom uk-text-center uk-text-right@l" itemprop="description caption">
+						• {{this.figcaption}}
+					</figcaption>
+					<!-- mixItUp buttons -->
+					<ul class="uk-subnav uk-subnav-divider uk-margin-bottom uk-margin-remove-top uk-text-center uk-visible@m">
+						<li><button onclick="topFunction()" href="#top" type="button" class="control uk-button uk-button-link uk-button-small" data-filter="all">#All</button></li>
+						<li><button onclick="topFunction()" href="#top" type="button" class="control uk-button uk-button-link uk-button-small" data-filter=".{{this.category.name}}">#{{this.category.name}}</button></li>
+					</ul>
+				</figure>
+			</li>
+			{{/each}}<!--/end each gallery -->
+
+		</ul>
+	</main>
+
+
+	<!-- sub-menu -->
+	<section class="uk-container uk-container-large uk-margin-bottom uk-margin-top">
+		<div class="uk-button-group">
+			<!-- Web design btn -->
+			<a class="uk-button uk-button-primary uk-margin-small-bottom" href="/{{global.language}}/portfolio/web-design-uix">
+				{{global.mainmenu.items.[2].child.[0].label}}
+			</a>
+			<!-- grphic design btn לזכור שזה לא דינמי מועד לבאגים אם אשנה משהו באתר-->
+			<a class="uk-button uk-button-default  uk-margin-small-bottom uk-margin-small-{{global.right_on_rtl_left_on_ltr}}" href="/{{global.language}}/portfolio/graphic-design" >
+				{{global.mainmenu.items.[2].child.[1].label}}
+			</a>
+		</div>
+	</section>
+
+
+	<!-- footer -->
+	{{>footer}}
+	<!-- scripts -->
+	{{>uikit}}
+	{{>jquery}}
+	{{>fancybox}}
+	{{>mixitup}}
+	<!-- initialize -->
+	<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function() {
+
+		//Active //
+		// Set parent active
+		function setActive5() {
+			aObj = document.getElementById('nav-desktop').getElementsByTagName('a');
+			currentPath = window.location.pathname;
+			for(i=0;i<aObj.length;i++) {
+				if(aObj[i].getAttribute('href') == currentPath) {
+					aObj[i].parentElement.className='uk-active';
+					aObj[i].parentElement.parentElement.parentElement.parentElement.className='uk-active';
+				}
+			}
+		}
+		setActive5();
+
+
+		//MIXITUP//
+		var containerEl = document.querySelector("#container");
+		// mixitup.Config
+		var mixer = mixitup(containerEl, {
+			controls: {
+				live: true,
+				toggleLogic: 'and'
+			},
+			animation: {
+				animateResizeContainer: true
+			},
+		});
+
+		// Custom click event - open fancyBox manually
+		// Choose what buttons to display by default
+		$("[data-fancybox]").fancybox({
+			selector : '[data-fancybox="web-design"]',
+			hash     : true,
+			infobar : true,
+			arrows : true,
+			buttons : [
+				'thumbs',
+				'close'
+			],
+			infobar : true,
+			arrows : true,
+			thumbs : {
+				autoStart: false
+			},
+			mobile : {
+				thumbs : {
+					autoStart: false
+				}
+			},
+			loop : true,
+			transitionEffect  : "slide",
+			clickContent : function( current, event ) {
+				return current.type === 'image' ? 'next' : false;
+			},
+
+		});
+	});
+</script>
+
+{{/body}}

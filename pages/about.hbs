@@ -1,0 +1,526 @@
+{{>head}}
+<!--plugins-->
+{{>fancybox-css}}
+
+<link rel="canonical" href="{{global.base_url}}/{{global.language}}/{{_meta.pagename}}" />
+<link rel="alternate" hreflang="en" href="{{global.base_url}}/en/{{_meta.pagename}}" >
+<link rel="alternate" hreflang="he" href="{{global.base_url}}/he/{{_meta.pagename}}">
+
+<style>
+/* =========== about-page ================ */
+@media screen and (max-width: 900px) {
+	.uk-tab .uk-text-large{
+		text-align: center;
+		font-size: 15px;
+	}
+
+	h3.uk-h2{
+	font-size: 24px;
+	line-height: 31px;
+	}
+
+	h4.uk-text-large{
+	font-size: 20px;
+	line-height: 25px;
+	}
+
+	p.uk-text-large{
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+@media screen and (min-width: 900px) {
+	.uk-tab li a:hover{
+		background-color: rgba(51, 51, 51, 0.05);
+	}
+}
+#tab-content .uk-accordion-title{
+	background: white;
+	padding: 15px 25px;
+	border-bottom: 2px solid  rgba(51, 51, 51, 0.1);
+}
+
+#tab-content .uk-accordion-title:hover{
+	background: rgba(51, 51, 51, 0.02);
+	cursor: pointer;
+}
+
+#tab-content .uk-accordion-content{
+	margin-top: 0px;
+	padding: 0px 25px 35px 25px;
+}
+
+aside ul li span{
+	margin-left: 1px;
+}
+
+.item:not(:first-child) {
+	border-top: 1px solid #e5e5e5;
+}
+</style>
+
+
+
+</head>
+
+<body  itemscope itemtype="http://schema.org/AboutPage" style="background: #f8f8f8;">
+	{{#>body}}
+
+
+		{{>hero-slider}}
+
+
+
+
+	<!-- Breadcrumb -->
+	<nav class="uk-container uk-container-large uk-margin-bottom" itemprop="breadcrumb">
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="uk-breadcrumb uk-margin-small-top">
+			<li itemprop="itemListElement" itemscope	itemtype="http://schema.org/ListItem">
+				<a itemscope itemtype="http://schema.org/Thing" itemprop="item"  href="/{{global.language}}" data-uk-tooltip="pos: bottom" title="{{global.breadcrumbs_back_to_main}}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24">
+						<g class="nc-icon-wrapper" fill="#999999">
+							<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+						</g>
+					</svg>
+					<span itemprop="name">{{global.home_label_name}}</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/{{global.language}}/{{_meta.pagename}}"> <span itemprop="name">{{seo.title}}</span></a>
+				<meta itemprop="position" content="2" />
+			</li>
+		</ol>
+	</nav>
+
+	<section id="main" class="uk-section uk-section-default uk-section-l2arge">
+		<div class="uk-container uk-container-large">
+			<div class="uk-flex uk-grid-large uk-flex-middle" data-uk-grid="">
+				<div class="uk-width-2-5@m" uk-scrollspy="cls: uk-animation-slide-{{global.right_on_rtl_left_on_ltr}}-medium;  offset-top: -100">
+					<h2 itemprop="headline" class="uk-h2 uk-text-bold uk-heading-line"><span>{{section_1.heading_top}}</span></h2>
+					<p itemprop="description" class="uk-text-lead">
+						{{section_1.paragraph_top}}
+					</p>
+				</div>
+				<!-- gallery -->
+				<div class="uk-width-3-5@m" id="gallery" uk-scrollspy="cls: uk-animation-slide-{{global.left_on_rtl_right_on_ltr}}-medium;  offset-top: -150">
+					<ul class="uk-grid-match uk-grid-small" id="nested-grid" data-uk-grid="">
+						<li class="uk-width-1-2m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/webdesign-uix-resturant-homepage-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/800w/webdesign-uix-resturant-homepage-siton.jpg" alt="עיצוב אתר רספונסיבי" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="800">
+								<meta itemprop="height" content="450">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top uk-hidden uk-text-small" itemprop="description caption">עיצוב אתר רספונסיבי</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-2m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/webdesign-blog-news-site-homepage-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/800w/webdesign-blog-news-site-homepage-siton.jpg" alt="עיצוב אתר בסגנון נקי" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="800">
+								<meta itemprop="height" content="450">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top  uk-hidden uk-text-small" itemprop="description caption">עיצוב אתר בסגנון נקי</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-3@m uk-width-1-1">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/app-design-isometrics-mockup-uix-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/800w/app-design-isometrics-mockup-uix-siton.jpg" alt="עיצוב למובייל - דף פרופיל" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="300">
+								<meta itemprop="height" content="169">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top  uk-hidden uk-text-small" itemprop="description caption">עיצוב למובייל - דף פרופיל</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-3@m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/responsive-web-design-uix-hr-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/300w/responsive-web-design-uix-hr-siton.jpg" alt="עיצוב אתר רספונסיבי - דף אודות" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="300">
+								<meta itemprop="height" content="169">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top  uk-hidden uk-text-small" itemprop="description caption">עיצוב אתר רספונסיבי - דף אודות</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-3@m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/landing-page-cleandesign-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/300w/landing-page-cleandesign-siton.jpg" alt="   עיצוב למובייל - תפריט רספונסיבי - offCanvas" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="300">
+								<meta itemprop="height" content="169">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-hidden uk-margin-small-top  uk-text-small" itemprop="description caption">
+									עיצוב למובייל - תפריט רספונסיבי - offCanvas
+									<!-- optionally define copyright -->
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+					<p class="uk-margin-medium-top uk-text-center">
+						<a href="/{{global.language}}/portfolio/web-design-uix" class="uk-button uk-button-primary">
+						{{section_1.button_text}}
+					</a>
+				</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- main - tabs + aside -->
+	<div class="uk-section">
+		<div class="uk-container uk-container-large uk-margin-large-bottom">
+			<div class="uk-grid uk-grid-large" data-uk-grid="">
+				<!-- col1 -->
+				<aside class="uk-width-1-4@m uk-margin-medium-bottom" itemscope itemtype="http://schema.org/WPSideBar">
+					<div class="uk-card uk-card-default uk-card-body">
+						<header>
+							<h2 class="uk-margin-small uk-text-meta">
+								{{aside.main_heading}}
+							</h2>
+							<h3 itemprop="name" class="uk-h1 uk-margin-remove-top">
+								{{aside.name}}
+							</h3>
+							<figure class="uk-margin">
+								<img width="150" src="/assets/img/ezra-siton-profile-image/ezra-siton-profile-image.jpg" class="uk-border-circle" alt="עזרא סיטון - תמונת פרופיל">
+							</figure>
+							<p itemprop="about" class="uk-margin-medium uk-h3 uk-margin-remove-top">
+								{{aside.sub_heading}}
+							</p>
+						</header>
+						<h3 class="uk-margin-small  uk-text-small">
+							{{aside.skills_heading}}
+						</h3>
+						<ul class="uk-padding-remove uk-margin-remove" data-uk-margin data-uk-padding data-uk-scrollspy="target: > li; cls:uk-animation-fade; delay: 30">
+							{{#each aside.skills}}
+							<li class="uk-display-inline-block">
+								<a target="_blank" title="{{ this.label}}" href="{{this.label_url}}">
+									<span itemprop="keywords" class="uk-label">
+										{{this.label}}
+									</span>
+								</a>
+							</li>
+							{{/each}} <!-- end each  aside.skills -->
+						</ul>
+						<hr>
+						<h3 class="uk-margin-small  uk-text-small">
+							{{aside.what_i_do.heading}}
+						</h3>
+						<p class="uk-margin-medium uk-margin-remove-top uk-text-meta">
+							{{aside.what_i_do.paragraph}}
+						</p>
+						<hr>
+						<h3 class="uk-margin-small  uk-text-small">
+							{{aside.sameAs_heading}}
+						</h3>
+
+
+						<ul class="uk-subnav" data-uk-margin>
+							{{#each global.footer.social_networks}}
+							<li class="uk-margin-small-bottom">
+								<a title="{{this.heading}}" class="uk-label" style="background: rgba(51, 51, 51, 0.04);" itemprop="sameAs" target="_blank" href="{{this.url}}">
+									<img width="16" height="16" src="{{this.icon}}" alt="{{this.heading}} logo">
+									<span>{{this.heading}}</span>
+								</a>
+							</li>
+							{{/each}}
+						</ul>
+
+
+						<ul class="uk-subnav uk-subnav-divider" data-uk-margin>
+
+
+							{{#each aside.sameAS}}
+							<li>
+								<a itemprop="sameAs" title="{{ this.label}}" target="_blank" href="{{this.label_url}}">
+									{{this.label}}
+								</a>
+							</li>
+							{{/each}} <!-- end each  aside.sameAs -->
+						</ul>
+					</div>
+					<!--/card -->
+				</aside>
+				<!--col-2 -->
+				<!-- MAIN CONTENT-->
+				<main  class="uk-width-3-4@m" itemprop="mainContentOfPage" style="padding-top: 40px; margin-top: -40px;">
+					<!-- TAB MENU -->
+					<nav id="tab-menu" class="">
+						<ul class="uk-tab uk-child-width-expand" data-uk-switcher="connect: .tab-content; animation: uk-animation-fade">
+							<li class="">
+								<a href="#" title="Professional knowledge" data-uk-tooltip><span class="uk-text-large"> <span class="st-text-light"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 64 64" xml:space="preserve" width="24" height="24">
+									<g class="nc-icon-wrapper" fill="#444444">
+										<path fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M4,34l6-6l12,8 c0,0,15.3-15.5,36-26l2,6c0,0-21.9,12.8-38,38L4,34z" stroke-linejoin="miter"></path>
+									</g>
+								</svg></span><br>
+								{{tab_menu.technology_label}}
+							</span></a>
+						</li>
+						<li>
+							<a href="#" title="Education" data-uk-tooltip><span class="uk-text-large">
+								<span class="st-text-light"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 64 64" xml:space="preserve" width="24" height="24">
+									<g class="nc-icon-wrapper" fill="#444444">
+										<path fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M51,9V2H7v54 c0,3.314,2.686,6,6,6" stroke-linejoin="miter"></path>
+										<path fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M19,56c0,3.314-2.686,6-6,6 h40c3.314,0,6-2.686,6-6v-4H19V56z" stroke-linejoin="miter"></path>
+										<line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="17" y1="16" x2="34" y2="16" stroke-linejoin="miter"></line>
+										<line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="17" y1="27" x2="34" y2="27" stroke-linejoin="miter"></line>
+										<line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="17" y1="38" x2="29" y2="38" stroke-linejoin="miter"></line>
+										<polyline data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-miterlimit="10" points="58,28.484 58,43 51,38 44,43 44,28.484 " stroke-linecap="butt"></polyline>
+										<circle data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="51" cy="20" r="11" stroke-linejoin="miter"></circle>
+										<line fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="51" y1="52" x2="51" y2="45" stroke-linejoin="miter"></line>
+									</g>
+								</svg>
+							</span>
+							<br>
+							{{tab_menu.education_label}}
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="Work Experience" data-uk-tooltip><span class="uk-text-large"><span class="st-text-light"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 64 64" xml:space="preserve" width="24" height="24">
+						<g class="nc-icon-wrapper" fill="#444444">
+							<polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points=" 22,12 22,4 42,4 42,12 " stroke-linejoin="miter"></polyline>
+							<path fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M2,44V16 c0-2.209,1.791-4,4-4h52c2.209,0,4,1.791,4,4v28H2z" stroke-linejoin="miter"></path>
+							<path fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M58,49v7 c0,2.209-1.791,4-4,4H10c-2.209,0-4-1.791-4-4v-7" stroke-linejoin="miter"></path>
+							<rect data-color="color-2" x="22" y="22" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="20" height="12" stroke-linejoin="miter"></rect>
+						</g>
+					</svg></span><br>
+					{{tab_menu.jobs_label}}
+				</span></a>
+			</li>
+		</ul>
+	</nav>
+	<!-- TAB CONTENT -->
+	<div id="tab-content" class="uk-switcher uk-margin-large-bottom uk-margin-medium-top tab-content" itemscope itemtype="http://schema.org/WebPageElement">
+		<!-- 1/3 - TAB I - Technology -->
+		<section id="technology">
+			<h2 itemprop="headline" class="uk-width-1-1 uk-hidden">ידע</h2>
+			<!-- ACCORDION -->
+			<div class="uk-width-1-1" data-uk-accordion="collapsible: true; multiple: true">
+				<!-- accordion 1/3 -->
+				{{#each tab_creative_label}}
+				<div class="uk-open uk-card uk-card-default">
+					<h3 class="uk-accordion-title uk-text-bold uk-text-primary">
+						• {{this.label}}
+					</h3>
+					<!-- accordion content 1/3 -->
+					<div class="uk-accordion-content" data-uk-grid>
+						{{#each topics}}
+						<div class="box1 uk-width-1-3@m  uk-margin-top">
+							<h4 class="uk-text-bold uk-heading-bullet uk-margin-top2">
+								{{this.heading}}
+							</h4>
+							<ul class="uk-list uk-list-bullet">
+								{{#each sub_topics}}
+								<li>
+									<a title="{{this.label}}" href="{{this.url}}" class="uk-link-reset" rel="tag" target="_blank">
+										{{this.label}}
+									</a>
+								</li>
+								{{/each}}
+							</ul>
+						</div>
+						{{/each}}
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</section>
+		<!-- 2/3 - TAB 2 - Education -->
+		<section id="education" class="">
+			{{#each tab_education_label}}
+			<h2 itemprop="headline">{{this.label}}</h2>
+			<div id="wrapper" class="uk-card uk-card-default uk-card-small uk-card-body">
+				{{#each topics}}
+				<div class="item">
+					<div class="uk-margin-bottom uk-margin-top uk-text-meta">{{ this.years }}</div>
+					<img class="uk-margin-bottom" alt="{{this.logo_alt}}" src="{{this.logo_src}}">
+					<a class="uk-link-reset" target="_blank" href="{{this.heading_url}}" title="{{ this.heading }}">
+						<h3 class="uk-margin-small uk-h2 uk-text-primary uk-width-3-5@m">
+							{{ this.heading }}
+						</h3>
+					</a>
+					<p class="uk-margin uk-text-large uk-width-4-5@m">
+						{{ this.lead_text }}
+					</p>
+					<p class="uk-margin uk-width-4-5@m">
+						{{ this.paragraph }}
+					</p>
+					<ul class="uk-margin-medium uk-list">
+						{{#each sub_topics}}
+						<li class="">
+							<div class="uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle uk-grid" data-uk-grid="">
+								<div class="uk-width-auto ">
+									<span class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" data-ratio="1">
+										<polyline fill="none" stroke="#000" stroke-width="1.1" points="4,10 8,15 17,4"></polyline>
+									</svg></span>
+								</div>
+								<div>
+									{{ this.label }}
+								</div>
+							</div>
+						</li>
+						{{/each}} <!-- end each sub-topics -->
+					</ul>
+				</div>
+				{{/each}} <!-- end each topics -->
+			</div>
+			{{/each}} <!-- end each tab_education_label -->
+		</section>
+		<!--JOB 3 -->
+		<section id="job3" class="uk-card uk-card-default uk-card-small uk-card-body">
+			{{#each tab_jobs_label}}
+			{{#each topics}}
+			<div class="item">
+				<div class="uk-margin-small uk-margin-top uk-text-meta">{{this.years}}</div>
+				<h3 class="uk-text-primary uk-margin-small uk-h2">
+					{{ this.heading }}
+				</h3>
+				<h4 class="uk-margin-small uk-text-large">
+					{{this.lead_text}}
+				</h4>
+				<p class="uk-margin uk-width-4-5@m">
+					{{ this.paragraph }}
+				</p>
+				<ul class="uk-margin-medium uk-list">
+					{{#each sub_topics}}
+					<li>
+						<div class="uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle uk-grid" data-uk-grid="">
+							<div class="uk-width-auto uk-first-column">
+								<span class="uk-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" data-ratio="1">
+									<polyline fill="none" stroke="#000" stroke-width="1.1" points="4,10 8,15 17,4"></polyline>
+								</svg></span>
+							</div>
+							<div>
+								{{ this.label }}
+							</div>
+						</div>
+					</li>
+					{{/each}} <!-- end each sub-topics -->
+				</ul>
+			</div>
+			{{/each}} <!-- end each topics -->
+			{{/each}} <!-- end each tab_education_label -->
+		</section>
+	</main>
+</div>
+</div>
+</div>
+</div><!--end container -->
+<!-- /end - main - tabs + aside section -->
+<!-- go-to-main-btn -->
+<div class="uk-positi3on-bottom-center uk-margin uk-text-center">
+	<a title="{{global.back_to_top_title}}" data-uk-tooltip="pos: top" class="uk-padding-large" href="#wrapper" data-uk-scroll="">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 48 48" xml:space="preserve" width="48" height="48">
+			<g class="nc-icon-wrapper">
+				<path fill="#1e87f0" d="M45,1H3C1.89543,1,1,1.89543,1,3v42c0,1.10457,0.89543,2,2,2h42c1.10457,0,2-0.89543,2-2V3 C47,1.89543,46.10457,1,45,1z"></path>
+
+				<path fill="#FFFFFF" d="M24.70789,13.29382c-0.09235-0.09259-0.20306-0.16589-0.32581-0.21674 c-0.24438-0.10107-0.51978-0.10101-0.76416,0.00006c-0.12274,0.05078-0.23346,0.12408-0.32581,0.21667l-7.99915,7.99915 c-0.39062,0.39062-0.39062,1.02344,0,1.41406s1.02344,0.39062,1.41406,0L23,16.41406V36c0,0.55225,0.44727,1,1,1s1-0.44775,1-1 V16.41406l6.29297,6.29297C31.48828,22.90234,31.74414,23,32,23s0.51172-0.09766,0.70703-0.29297 c0.39062-0.39062,0.39062-1.02344,0-1.41406L24.70789,13.29382z"></path>
+			</g>
+		</svg>
+	</a>
+</div>
+<!-- isometric mac -->
+	<section class="uk-background-norepeat uk-background-cover uk-background-center-center uk-background-image@m uk-flex uk-flex-middle" data-uk-height-viewport="offset-top: true" data-uk-parallax="bgy: 100; viewport:0.5" style="background-image: url('{{isometric.bgImg}}');box-sizing: border-box; min-height: 100vh;">
+		<div class="uk-width-1-1">
+			<div class="uk-container uk-position-relative">
+				<div class="uk-grid uk-grid-large uk-grid-margin-large" data-uk-grid="">
+					<div class="uk-width-2-3@m">
+						<div>
+							<div data-uk-scrollspy="cls:uk-animation-slide-top-medium; delay: 50; offset-top:0; repeat: false">
+								<h2 class="uk-margin st-text-light uk-text-center">
+									{{isometric.heading}}
+								</h2>
+								<h3 class="uk-margin-medium uk-margin-remove-top uk-width-xlarge uk-margin-auto uk-text-center uk-h1">
+									{{isometric.sub_heading}}
+								</h3>
+							</div>
+							<div class="uk-margin uk-width-xlarge uk-margin-auto uk-text-center" data-uk-scrollspy="cls:uk-animation-fade">
+								<p>
+									{{isometric.paragraph}}
+								</p>
+							</div>
+						</div>
+						<div class="uk-margin-large uk-text-center uk-grid-match uk-child-width-1-3 uk-child-width-1-3@s uk-grid-small uk-grid-divider uk-grid" data-uk-grid="" data-uk-scrollspy="target: > div; cls:uk-animation-slide-bottom-medium; delay: 50; offset-top:0; repeat: false">
+							{{#each isometric.counter}}
+							<div>
+								<div class="uk-panel">
+									<h3 class="uk-margin uk-heading-primary uk-margin-remove-adjacent">{{ this.number }}</h3>
+									<p class="uk-margin">
+										{{{this.label}}}
+									</p>
+								</div>
+							</div>
+							{{/each}} <!-- end each counter -->
+					</div>
+					<div class="uk-width-expand@m">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- footer -->
+	{{>footer}}
+	<!-- scripts -->
+	{{>uikit}}
+	<!-- async -->
+	{{>jquery}}
+	{{>fancybox}}
+
+	<!-- initialize -->
+	<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function() {
+		// Custom click event - open fancyBox manually
+		// Choose what buttons to display by default
+		$().fancybox({
+			selector : '[data-fancybox="web-design-uix"]',
+			thumbs   : true,
+			hash     : true,
+			infobar : true,
+			arrows : true,
+			buttons : [
+				'thumbs',
+				'close'
+			],
+			loop : true,
+			transitionEffect  : "slide",
+			thumbs : {
+				autoStart : false
+			},
+			clickContent : function( current, event ) {
+				return current.type === 'image' ? 'next' : false;
+			},
+		});
+	});
+	</script>
+
+	{{/body}}

@@ -1,0 +1,36 @@
+<!-- לזכור שזה לאינדקס 3 אם אני משנה את התפריט חובה לשנות גם פה -->
+<section id="services_pagelist_with_images" class="uk-grid-divider" data-uk-grid itemscope itemtype="http://schema.org/Service">
+	{{#grouped_each 4 global.mainmenu.items.[3].services_list}}
+	{{#each this}}
+	<div class="uk-width-1-2@m uk-width-1-4@l">
+		<div class="uk-card-head2er">
+			<h3 class="uk-heading-bullet uk-margin-large-bottom">{{label}}</h3>
+		</div>
+		<div class="uk-margin-top">
+			<ul class="uk-list" itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog" data-uk-margin
+			data-uk-scrollspy="target: > li; cls:uk-animation-slide-bottom-small; delay: 500">
+				{{#each topics}}
+				<li class="uk-margin-bottom" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+					<div class="uk-card uk-card-small uk-card-default" itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+						<a class="uk-link-heading" title="{{this.label}}" href="/{{../language}}/{{../parent_slug}}/{{page_slug}}">
+							<div class="uk-card-media-top">
+								<div class="uk-inline-clip uk-transition-toggle" tabindex="0">
+									<img class="uk-transition-scale-up uk-transition-opaque" src="{{this.image}}" alt="" >
+								</div>
+							</div>
+							<div class="uk-card-body uk-body-small">
+								<h3 class=" uk-card-title uk-text-primary" itemprop="name">
+									<img class="nav-icon" src="{{this.icon}}" alt="" width="16" height="16">
+									&nbsp;{{this.label}}
+								</h3>
+							</div>
+						</div>
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	{{/each}}
+	{{/grouped_each}}
+</section>

@@ -1,0 +1,54 @@
+<!-- why us -->
+<section id="why-us" class="uk-section uk-section-muted">
+	<div  class="uk-container uk-container-large">
+		<span class="uk-display-block  uk-h3 uk-text-center st-text-light uk-text-danger" data-uk-scrollspy="cls:uk-animation-slide-bottom-medium">
+			{{why_us.teaser}}
+		</span>
+		<h2 class="uk-margin-remove-top uk-margin-bottom uk-heading-line uk-text-center" data-uk-scrollspy="cls:uk-animation-slide-top-medium">
+			<span>
+				{{why_us.heading}}
+			</span>
+		</h2>
+		<br>
+		<br>
+		<div class="swiper-container swiper-container-features swiper-features" >
+			<!-- Additional required wrapper -->
+			<ul class="uk-list swiper-wrapper uk-text-{{global.right_on_rtl_left_on_ltr}}@s uk-text-center uk-margin-bottom uk-grid-match">
+				<!-- Slides LOOP -->
+				{{#each why_us.list}}
+				<li class="swiper-slide uk-margin-remove-top uk-margin-bottom" itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer"
+				style="height: auto;"
+				>
+					<div class="uk-card uk-card-body uk-card-default uk-card-small uk-text-center">
+						<!--svg -->
+						<div class="uk-card-media-top uk-text-center">
+							<span class="uk-display-inline-block uk-width-1-5">
+								<img src="{{this.icon}}" alt="{{this.name-}}-icon">
+							</span>
+						</div>
+						<div class="uk-card-body" itemprop="itemOffered" itemscope itemtype="http://schema.org/Service">
+							<h3 itemprop="name" class="uk-card-title uk-text-bold">
+								{{this.name}}
+							</h3>
+							<p itemprop="description" class="">
+								{{this.description}}
+							</p>
+						</div>
+						<!--
+						<div class="uk-card-footer uk-button-link">
+						<a href="#" class="uk-button uk-button-text">קרא עוד</a>
+					</div>
+				-->
+			</div>
+		</li>
+		{{/each}}<!-- end each why_uy.list -->
+	</ul>
+	<!-- If we need pagination -->
+	<div class="swiper-pagination"></div>
+	<!-- If we need navigation buttons -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+
+</div>
+</div>
+</section>

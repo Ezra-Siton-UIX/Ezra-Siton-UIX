@@ -1,0 +1,409 @@
+{{>head}}
+
+<link rel="canonical" href="{{global.base_url}}/{{global.language}}/" />
+<link rel="alternate" hreflang="en" href="{{global.base_url}}/en" >
+<link rel="alternate" hreflang="he" href="{{global.base_url}}/he">
+<!--plugins-->
+{{>fancybox-css}}
+{{>swiper-css}}
+{{>vegas-css}}
+
+<style>
+
+</style>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+	{{#>body}}
+
+
+
+	<header id="#header" class="uk-section uk-section-secondary uk-text-center uk-text-{{global.right_on_rtl_left_on_ltr}}@s"
+	itemscope itemtype="http://schema.org/WPHeader">
+	<div class="uk-container uk-container-large">
+		<div class="uk-grid-large uk-grid" data-uk-grid>
+			<div class="uk-width-large@m uk-grid-item-match">
+				<div class="uk-invisi4ble uk-tile uk-tile-secondary uk-margin-large-bottom" style="background: rgba(34, 34, 34, 0.99);">
+					<span class="uk-display-block uk-width-medium  uk-margin-remove-bottom uk-margin-auto uk-margin-remove-bottom- st-text-light uk-text-large">
+						<span class="uk-text-success">
+							{{header.teaser}}
+						</span>
+					</span>
+					<div class="st-header">
+						<h1 itemprop="headline" class="uk-heading-divider uk-padding-bottom uk-margin-small-top uk-width-medium uk-margin-auto st-header">
+							{{header.heading}}
+						</h1>
+					</div>
+					<p itemprop="disambiguatingDescription" class="uk-margin-small-top  uk-width-medium uk-margin-auto">
+						{{header.paragraph}}
+					</p>
+					<div class=" uk-width-medium uk-margin-auto">
+						<a class="el-content uk-button uk-button-primary" href="/portfolio/web-design-uix.html">
+							{{header.button_text}}
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="uk-width-expand@m">
+			</div>
+			<div class="uk-hidden2 uk-position-bottom uk-overlay2 uk-overlay-primary2 uk-margin-bottom uk-text-center">
+				<a class="uk-button" href="#main" data-uk-scroll="">{{global.jump_to_main}}<span class=" uk-margin-small-left uk-margin-small-right">&#8595;</span></a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- /.site-header -->
+<main id="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/WebPageElement">
+	<section class="uk-section uk-section-mute2d uk-section-large">
+		<div class="uk-container uk-container-large">
+			<div class="uk-grid uk-grid-large uk-flex uk-flex-middle" data-uk-grid>
+				<!-- col 1 -->
+				<div class="uk-width-2-5@m" data-uk-margin>
+					<div>
+						<div class="st-text-light uk-text-large uk-text-danger  uk-text-center uk-text-{{global.right_on_rtl_left_on_ltr}}@m" data-uk-scrollspy=" cls:uk-animation-slide-top-small; offset-top:50">
+							{{about.teaser}}
+						</div>
+						<h2 class="uk-h1 st-header uk-heading-divider uk-margin-small uk-margin-remove-adjacent uk-text-center uk-text-{{global.right_on_rtl_left_on_ltr}}@m" data-uk-scrollspy=" cls:uk-animation-slide-top-small; offset-top:50">
+							{{about.heading}}
+						</h2>
+						<p data-uk-scrollspy=" cls:uk-animation-slide-bottom-small; offset-top:50">
+							{{{about.paragraph}}}
+						</p>
+						<a class="uk-button uk-button-primary" href="/{{ global.language }}/about">
+							{{about.button_text}}
+						</a>
+					</div>
+				</div>
+				<!-- col 2 -->
+				<div class="uk-width-3-5@m ">
+					<!-- //////////// WEB DESIGN IMAGE GALLERY ////// -->
+					<ul itemscope itemtype="http://schema.org/ImageGallery" class="uk-grid-match uk-grid-small " id="nested-grid" data-uk-grid="" data-uk-scrollspy="target: > li; cls:uk-animation-fade; delay: 500">
+						<li class="uk-width-1-2m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/responsive-web-design-uix-clean-design-hr-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/800w/responsive-web-design-uix-clean-design-hr-siton.jpg" alt="עיצוב אתר רספונסיבי" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="800">
+								<meta itemprop="height" content="450">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top uk-hidden uk-text-small" itemprop="description caption">עיצוב אתר רספונסיבי</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-2m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/webdesign-uix-startup-one-page-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/800w/webdesign-uix-startup-one-page-siton.jpg" alt="עיצוב אתר בסגנון נקי" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="800">
+								<meta itemprop="height" content="450">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top  uk-hidden uk-text-small" itemprop="description caption">עיצוב אתר בסגנון נקי</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-3@m uk-width-1-1">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/app-design-uix-profile-screen-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/800w/app-design-uix-profile-screen-siton.jpg" alt="עיצוב למובייל - דף פרופיל" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="300">
+								<meta itemprop="height" content="169">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top  uk-hidden uk-text-small" itemprop="description caption">עיצוב למובייל - דף פרופיל</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-3@m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/webdesign-uix-about-page-rtl-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/300w/webdesign-uix-about-page-rtl-siton.jpg" alt="עיצוב אתר רספונסיבי - דף אודות" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="300">
+								<meta itemprop="height" content="169">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-margin-small-top  uk-hidden uk-text-small" itemprop="description caption">עיצוב אתר רספונסיבי - דף אודות</figcaption>
+							</figure>
+						</li>
+						<li class="uk-width-1-3@m uk-width-1-2">
+							<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+								<a itemprop="contentUrl" data-fancybox="web-design-uix" data-width="1920" data-height="1080" href="/assets/img/webdesign/app-design-offcanvas-menu-design-siton.jpg">
+									<div class="uk-inline-clip uk-transition-toggle">
+										<img itemprop="thumbnail" class="uk-transition-scale-up uk-transition-opaque" src="/assets/img/webdesign/thumbnails/300w/app-design-offcanvas-menu-design-siton.jpg" alt="   עיצוב למובייל - תפריט רספונסיבי - offCanvas" />
+									</div>
+								</a>
+								<!-- image metadata -->
+								<meta itemprop="width" content="300">
+								<meta itemprop="height" content="169">
+								<meta itemprop="fileFormat" content="jpeg">
+								<!-- figcaption -->
+								<figcaption class="uk-hidden uk-margin-small-top  uk-text-small" itemprop="description caption">
+									עיצוב למובייל - תפריט רספונסיבי - offCanvas
+									<!-- optionally define copyright -->
+								</figcaption>
+							</figure>
+						</li>
+					</ul>
+					<p class="uk-margin-medium-top uk-text-center"><a href="portfolio/web-design-uix" class="uk-button uk-button-primary">{{about.button_gallery}}</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+{{>zigzag}}
+
+{{>why_us}}
+
+<!-- image-divider -->
+<div id="page#20" class="uk-secti3on uk-visible@m" style="background: black;">
+	<div data-uk-parallax="bgy: -300; opacity: 0.5,1;" style="background-image:url('/assets/img/webdesign/app-design-isometrics-mockup-uix-siton.jpg');" class="uk-background-norepeat uk-background-cover uk-background-center-center  uk-section uk-section-xlarge">
+		<div class="uk-container uk-section uk-section">
+			<div class="uk-grid-margin uk-grid uk-grid-stack" data-uk-grid="">
+				<div class="uk-width-1-1@m">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Technology -->
+<section id="technology" class="uk-section uk-section-large">
+	<div class="uk-container uk-container-large">
+		<span class="uk-display-block  uk-h3 uk-text-center st-text-light uk-text-danger" data-uk-scrollspy="cls:uk-animation-slide-bottom-medium">
+			{{technology.teaser}}
+		</span>
+		<h2 class="uk-margin-remove-top uk-heading-line uk-text-center" data-uk-scrollspy="cls:uk-animation-slide-top-medium">
+			<span>
+				{{technology.heading}}
+			</span>
+		</h2>
+		<div class="uk-margin-large uk-column-1-2@s uk-column-1-2@m uk-column-1-2@l">
+			<p>
+				{{technology.paragraph_one}}
+			</p>
+			<p>
+				{{technology.paragraph_two}}
+			</p>
+		</div>
+
+		<!-- LOGOS -->
+		<div class="uk-margin-large-top uk-visible@m">
+			<ul class="uk-grid-divider uk-margin-remove-vertical uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-4@m" data-uk-grid="" data-uk-scrollspy="target: > li > div; cls: uk-animation-scale-up;  delay: 50; repeat: true">
+				<li class="">
+					<div class="uk-margin uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom" src="/assets/img/webdesign/logos/responsive-web-design-icon.jpg" alt="responsive web design - logo" />
+					</div>
+				</li>
+				<li class="">
+					<div class="uk-margin-large uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom" src="/assets/img/webdesign/logos/invision-prototypes-logo.jpg" alt="invision logo" />
+					</div>
+				</li>
+				<li class="uk-visible@m">
+					<div class="uk-margin uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom" src="/assets/img/webdesign/logos/wix-logo.jpg" alt="wix logo" />
+					</div>
+				</li>
+				<li class="">
+					<div class="uk-margin uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom" src="/assets/img/webdesign/logos/webflow-Responsive-web-design-tool-CMS-LOGO.jpg" alt="webflow logo" />
+					</div>
+				</li>
+			</ul>
+			<div class="uk-grid-collapse uk-margin-remove-vertical uk-grid uk-grid-stack" data-uk-grid="">
+				<div class="uk-width-1-1@s uk-first-column">
+					<div class="uk-hr"></div>
+				</div>
+			</div>
+			<ul class="uk-grid-divider uk-margin-remove-vertical uk-child-width-1-3 uk-child-width-1-2@s uk-child-width-1-4@m" data-uk-grid="" data-uk-scrollspy="target: > li > div > img; cls: uk-animation-scale-down;  delay: 100; repeat: true">
+				<li class="uk-visible@m">
+					<div class="uk-margin uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom fade" src="/assets/img/webdesign/logos/concrete5-cms-logo.jpg" alt="concrete5 cms - logo" />
+					</div>
+				</li>
+				<li class="">
+					<div class="uk-margin uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom" src="/assets/img/webdesign/logos/uikit-a-lightweight-and-modular-front-end-framework-logo.jpg" alt="uikit - logo" />
+					</div>
+				</li>
+				<li class="">
+					<div class="uk-margin uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom" src="/assets/img/webdesign/logos/html-css-js-logo.jpg" alt="html-css-js logo"  />
+					</div>
+				</li>
+				<li class="">
+					<div class="uk-margin uk-text-center">
+						<img class="uk-margin-large-top uk-margin-large-bottom" src="/assets/img/webdesign/logos/adobe-photoshop.jpg"  alt="adobe photoshop logo" />
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- footer -->
+{{>footer}}
+<!-- scripts -->
+{{>uikit}}
+{{>jquery}}
+{{>fancybox}}
+{{>vegas}}
+{{>swiper}}
+{{>responsiveslides}}
+{{>readmore}}
+<!-- initialize -->
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+
+	// Fancybox3
+	$().fancybox({
+		selector : '[data-fancybox="web-design-uix"]',
+		hash     : true,
+		infobar : true,
+		arrows : true,
+		buttons : [
+			'thumbs',
+			'close'
+		],
+		thumbs : {
+			autoStart: false
+		},
+		mobile : {
+			thumbs : {
+				autoStart: false
+			}
+		},
+		loop : true,
+		transitionEffect  : "slide",
+
+		clickContent : function( current, event ) {
+			return current.type === 'image' ? 'next' : false;
+		},
+	});
+
+
+
+	var mySwiper = new Swiper ('.swiper-container-services', {
+		// Optional parameters
+		slidesPerView: 3,
+		spaceBetween: 30,
+		loop: true,
+		grabCursor: true,
+		slideToClickedSlide: false,
+		freeMode: false,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: false,
+		},
+
+
+
+		// Responsive breakpoints
+		breakpoints: {
+			// when window width is <= 640px
+			640: {
+				slidesPerView: 1,
+				spaceBetween: 30
+			}
+		}
+
+	});
+
+
+	var mySwiper = new Swiper ('.swiper-container-features', {
+		// Optional parameters
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: false,
+		grabCursor: true,
+		centerMode: false,
+		slideToClickedSlide: false,
+		freeMode: false,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: false,
+		},
+		// Responsive breakpoints
+		breakpoints: {
+			// when window width is <= 640px
+			640: {
+				slidesPerView: 1,
+				spaceBetween: 30
+			}
+		}
+
+	});
+
+
+	// VEGAS
+	// Background SLideShow
+	$('header').vegas({
+		overlay: true,
+		transition: 'fade2',
+		transitionDuration: 5000,
+		delay: 9000,
+		color: 'black',
+		shuffle: true,
+		animation: 'random',
+		animationDuration: 15000,
+		overlay: 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.0/overlays/04.png',
+		slides: [
+			{ src: '/assets/img/webdesign/app-design-isometrics-mockup-uix-siton.jpg' },
+			{ src: '/assets/img/webdesign/webdesign-uix-resturant-homepage-siton.jpg' },
+			{ src: '/assets/img/webdesign/app-design-offcanvas-menu-design-siton.jpg' },
+			{ src: '/assets/img/webdesign/webdesign-uix-about-page-rtl-siton.jpg' },
+			{ src: '/assets/img/webdesign/webdesign-uix-startup-one-page-siton.jpg' },
+			{ src: '/assets/img/webdesign/webdesign-uix-about-page-siton.jpg' }
+		]
+	});
+
+
+	//responsiveSlides
+	$(function() {
+		$(".rslides").responsiveSlides();
+	});
+});
+
+
+</script>
+{{/body}}<!-- הסוגר של זה בטמפלט של בודי -->

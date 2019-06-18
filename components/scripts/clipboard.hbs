@@ -1,0 +1,12 @@
+<!-- clipboard -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var clip = new Clipboard('#email-copy-btn');
+    clip.on('success', function(e) {
+      $('.copied').show();
+      $('.copied').fadeOut(1000);
+    });
+  });
+</script>

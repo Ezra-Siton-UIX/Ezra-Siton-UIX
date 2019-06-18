@@ -1,0 +1,30 @@
+<!-- לזכור שזה לאינדקס 3 אם אני משנה את התפריט חובה לשנות גם פה -->
+<nav id="services_pagelist" class="uk-grid-divider" data-uk-grid itemscope itemtype="http://schema.org/Service">
+	{{#grouped_each 4 global.mainmenu.items.[3].services_list}}
+	{{#each this}}
+	<div class="uk-width-1-2@m uk-width-1-4@l">
+		<div class="uk-card-head2er">
+			<h3 class="uk-heading-bullet">{{label}}</h3>
+		</div>
+		<div class="uk-margin-top">
+			<ul class="uk-list" itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
+				{{#each topics}}
+				<li>
+					<a title="{{this.label}}" data-uk-tooltip="pos: bottom"  class="uk-inline-clip2 uk-transition-toggle uk-display-block" itemprop="url" href="/{{../language}}/{{../parent_slug}}/{{page_slug}}">
+						<div uk-grid>
+							<div class="uk-width-expand uk-transition-scale-up2 uk-transition-opaque">
+								{{this.label}}
+							</div>
+							<div class="uk-width-auto uk-transition-scale-up2  uk-transition-opaque">
+								<img class="nav-icon" src="{{this.icon}}" alt="{{this.label}} icon" width="16" height="16">
+							</div>
+						</div>
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	{{/each}}
+	{{/grouped_each}}
+</nav>

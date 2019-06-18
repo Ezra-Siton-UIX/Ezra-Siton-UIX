@@ -1,0 +1,161 @@
+{{>head}}
+<!--plugins-->
+{{>fancybox-css}}
+
+<style>
+/*!
+Pure v1.0.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+
+/* scrollable menus */
+.pure-menu-scrollable {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.pure-menu-scrollable .pure-menu-list {
+	display: block;
+}
+
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+	display: inline-block;
+}
+
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+	display: none;
+}
+
+/* HORIZONTAL MENU */
+.pure-menu-horizontal {
+	width: 100%;
+	white-space: nowrap;
+}
+.pure-menu-horizontal .pure-menu-list {
+	display: inline-block;
+}
+/* Initial menus should be inline-block so that they are horizontal */
+.pure-menu-horizontal .pure-menu-item,
+.pure-menu-horizontal .pure-menu-heading,
+.pure-menu-horizontal .pure-menu-separator {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+}
+/* scrollable menus */
+.pure-menu-scrollable {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.pure-menu-scrollable .pure-menu-list {
+	display: block;
+}
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+	display: inline-block;
+}
+.pure-menu-horizontal.pure-menu-scrollable {
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+	-ms-overflow-style: none;
+	-webkit-overflow-scrolling: touch;
+	/* a little extra padding for this style to allow for scrollbars */
+	padding: 0.5em 0;
+}
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+	display: none;
+}
+</style>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" >
+	{{#>body}}
+
+
+
+
+
+
+	{{>service_main_area}}
+
+	<aside>
+		<div class="wow uk-section uk-section-primary uk-text-center">
+			<h2>אשמח לשמוע על הפרוייקט שלכם</h2>
+			<a href="/{{global.language}}/contact" class="uk-button uk-button-secondary uk-button-large">
+				צור קשר
+			</a>
+		</div>
+	</aside>
+
+
+
+
+
+	<!-- footer -->
+	{{>footer}}
+	<!-- scripts -->
+	{{>uikit}}
+	{{>jquery}}
+	{{>fancybox}}
+
+
+	<!-- initialize -->
+	<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function() {
+		// Active Service_sub_menu - לא עובד כרגע כי אין בכלל תפריט עליון עם לינקים //
+		function setActive4() {
+			aObj = document.getElementById('sub_menu').getElementsByTagName('a');
+			currentPath = window.location.pathname;
+			for(i=0;i<aObj.length;i++) {
+				if(aObj[i].getAttribute('href') == currentPath && aObj[i].parentElement.tagName == 'LI') {
+					aObj[i].parentElement.className='uk-active';
+				}
+			}
+		};
+
+		/* אחרי לקרוא לפונקציה שיהיו לינקים *ץ */
+
+		// Active Service_sub_menu //
+		function setActive5() {
+			aObj = document.getElementById('nav-desktop').getElementsByTagName('a');
+			currentPath = window.location.pathname;
+			for(i=0;i<aObj.length;i++) {
+				if(aObj[i].getAttribute('href') == currentPath) {
+					aObj[i].parentElement.className='uk-active';
+					aObj[i].parentElement.parentElement.parentElement.parentElement.className='uk-active';
+				}
+			}
+		};
+
+		// fancybox3 for gallery //
+		$('[data-fancybox]').fancybox({
+			hash     : true,
+			infobar : true,
+			arrows : true,
+			buttons : [
+				'close'
+			],
+			thumbs : {
+				autoStart: false
+			},
+			mobile : {
+				thumbs : {
+					autoStart: false
+				}
+			},
+			loop : true,
+			transitionEffect  : "fade",
+
+			clickContent : function( current, event ) {
+				return current.type === 'image' ? 'next' : false;
+			},
+		});
+
+	});
+
+
+	</script>
+
+	{{/body}}

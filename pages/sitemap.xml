@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- home  (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/"/>
+  </url>
+
+  <!-- about (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/about</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/about"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/about"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/"/>
+  </url>
+
+  <!-- portfolio (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/portfolio</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/portfolio"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/portfolio"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/portfolio</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/portfolio"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/portfolio"/>
+  </url>
+
+  <!-- portfolio/web-design-uix (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/portfolio/web-design-uix</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/portfolio/web-design-uix"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/portfolio/web-design-uix"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/portfolio</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/portfolio/web-design-uix"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/portfolio/web-design-uix"/>
+  </url>
+
+  <!-- portfolio/graphic-design (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/portfolio/graphic-design</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/portfolio/graphic-design"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/portfolio/graphic-design"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/portfolio</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/portfolio/graphic-design"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/portfolio/graphic-design"/>
+  </url>
+
+  <!-- services-page-list (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/services-page-list</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/services-page-list"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/services-page-list"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/services-page-list</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/services-page-list"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/services-page-list"/>
+  </url>
+
+  <!-- /internet/web-design/ (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/internet/web-design/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/web-design/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/web-design/"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/internet/web-design/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/web-design/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/web-design/"/>
+  </url>
+
+  <!-- .internet/user-experience-design/ (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/internet/user-experience-design/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/user-experience-design/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/user-experience-design/"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/internet/user-experience-design/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/user-experience-design/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/user-experience-design/"/>
+  </url>
+
+
+  <!-- .internet/web-development/ (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/internet/web-development/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/web-development/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/web-development/"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/internet/web-development/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/web-development/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/web-development/"/>
+  </url>
+
+
+  <!-- .internet/mobile-sites/ (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/internet/mobile-sites/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/mobile-sites/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/mobile-sites/"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/internet/mobile-sites/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/mobile-sites/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/mobile-sites/"/>
+  </url>
+
+
+  <!-- .internet/uikit/ (two urls) -->
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/he/internet/uikit/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/uikit/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/uikit/"/>
+  </url>
+
+  <url>
+    <loc>https://ezra-siton-design.netlify.com/en/internet/uikit/</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="he"
+               href="https://ezra-siton-design.netlify.com/he/internet/uikit/"/>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en"
+               href="https://ezra-siton-design.netlify.com/en/internet/uikit/"/>
+  </url>
+
+
+
+<!-- /print/graphic-design/(two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/print/graphic-design/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/print/graphic-design/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/print/graphic-design/"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/print/graphic-design/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/print/graphic-design/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/print/graphic-design/"/>
+</url>
+
+
+
+
+<!-- /print/logo-and-brand-identity/(two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/print/logo-and-brand-identity/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/print/logo-and-brand-identity/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/print/logo-and-brand-identity/"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/print/logo-and-brand-identity/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/print/logo-and-brand-identity/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/print/logo-and-brand-identity/"/>
+</url>
+
+
+
+
+<!-- website-builder/webflow/ (two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/website-builder/webflow/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/website-builder/webflow/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/website-builder/webflow/"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/website-builder/webflow/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/website-builder/webflow/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/website-builder/webflow/"/>
+</url>
+
+
+<!-- website-builder/elementor-wordpress/ (two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/website-builder/elementor-wordpress/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/website-builder/elementor-wordpress/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/website-builder/elementor-wordpress/"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/website-builder/elementor-wordpress/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/website-builder/elementor-wordpress/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/website-builder/elementor-wordpress/"/>
+</url>
+
+
+<!-- website-builder/wix/ (two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/website-builder/wix/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/website-builder/wix/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/website-builder/wix/"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/website-builder/wix/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/website-builder/wix/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/website-builder/wix/"/>
+</url>
+
+
+
+<!-- digital-marketing-campaign/banner-ads/ (two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/digital-marketing-campaign/banner-ads/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/digital-marketing-campaign/banner-ads/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/digital-marketing-campaign/banner-ads/"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/digital-marketing-campaign/banner-ads/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/digital-marketing-campaign/banner-ads/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/digital-marketing-campaign/banner-ads/"/>
+</url>
+
+
+<!-- digital-marketing-campaign/landing-pages/ (two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/digital-marketing-campaign/landing-pages/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/digital-marketing-campaign/landing-pages/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/digital-marketing-campaign/landing-pages/"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/digital-marketing-campaign/landing-pages/</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/digital-marketing-campaign/landing-pages/"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/digital-marketing-campaign/landing-pages/"/>
+</url>
+
+
+<!-- contact (two urls) -->
+<url>
+  <loc>https://ezra-siton-design.netlify.com/he/contact</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/contact"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/contact"/>
+</url>
+
+<url>
+  <loc>https://ezra-siton-design.netlify.com/en/contact</loc>
+  <xhtml:link
+             rel="alternate"
+             hreflang="he"
+             href="https://ezra-siton-design.netlify.com/he/contact"/>
+  <xhtml:link
+             rel="alternate"
+             hreflang="en"
+             href="https://ezra-siton-design.netlify.com/en/contact"/>
+</url>
+
+
+</urlset>
+

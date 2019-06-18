@@ -1,0 +1,249 @@
+<!-- FOOTER -->
+
+<footer itemscope itemtype="http://schema.org/WPFooter" class="uk-visible@m2 uk-section uk-section-muted uk-section-medium uk-padding-remove-bottom">
+	<div itemscope itemtype="http://schema.org/ProfessionalService" class="uk-container uk-container-large">
+		<div class="uk-grid uk-grid-small uk-grid-divider uk-margin-bottom" data-uk-grid="" data-uk-scrollspy="target: > section; cls:uk-animation-slide-bottom-medium; delay: 50; offset-top:0; repeat: false">
+
+			<!-- about me -->
+			<section class="uk-width-expand@m uk-width-2-5@s">
+				<div>
+					<div class="uk-card-b2ody">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" width="32" height="32"><g class="nc-icon-wrapper" transform="translate(0.5, 0.5)" fill="#444444"><line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="16" y1="31" x2="16" y2="24" stroke-linejoin="miter"></line> <path data-cap="butt" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" d="M12.819,19.083l-8.734,4.78 C2.8,24.564,2,25.911,2,27.375V31h28v-3.625c0-1.464-0.8-2.811-2.085-3.512l-8.734-4.78" stroke-linejoin="miter" stroke-linecap="butt"></path> <path fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" d="M8,9c0-4.418,3.582-8,8-8 s8,3.582,8,8c0,6-3.582,11-8,11S8,15,8,9z" stroke-linejoin="miter"></path> <path data-cap="butt" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" d="M8.038,8.212 C9.207,8.712,10.558,9,12,9c2.621,0,4.941-0.95,6.4-2.411C19.677,8.05,21.706,9,24,9" stroke-linejoin="miter" stroke-linecap="butt"></path></g>
+							</svg>
+							<h3 class="uk-display-inline-block uk-margin-remove">
+								&nbsp;{{global.about_me_heading}}
+							</h3>
+
+							<div class="uk-margin-top">
+								<a class="uk-link-reset" title="{{global.company_name}}" href="/{{ global.language }}/">
+									<h2 itemprop="name" class="uk-card-title uk-margin-remove">
+										<img alt="עזרא סיטון - תמונת פרופיל" itemprop="image" class="uk-border-circle" src="/assets/img/ezra-siton-profile-image/ezra-siton-profile-image-small.jpg">
+										{{global.company_name}}
+									</h2>
+								</a>
+								<p itemprop="description" class="">
+									{{global.footer.description}}
+								</p>
+								<h3 class="uk-text-small">
+									{{global.footer.social_heading}}
+								</h3>
+								<ul class="uk-subnav">
+									{{#each global.footer.social_networks}}
+									<li class="uk-margin-small-bottom">
+										<a title="{{this.heading}}" class="uk-label" style="background: rgba(51, 51, 51, 0.04);" itemprop="sameAs" target="_blank" href="{{this.url}}">
+											<img width="16" height="16" src="{{this.icon}}" alt="{{this.heading}} logo">
+											<span>{{this.heading}}</span>
+										</a>
+									</li>
+									{{/each}}
+								</ul>
+								<a href="/{{global.language}}/contact" class="uk-button uk-button-primary">Contact</a>
+							</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- sitemap -->
+			<section class="uk-width-expand@m uk-width-1-2@s">
+				<div>
+					<div class="uk-card-body2">
+
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" width="32" height="32"><g class="nc-icon-wrapper" transform="translate(0.5, 0.5)" fill="#444444"><line data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="5" y1="9" x2="17" y2="9" stroke-linejoin="miter"></line> <polyline data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points=" 5,1 5,25 17,25 " stroke-linejoin="miter"></polyline> <polygon fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="27,15 17,15 17,3 23,3 27,7 " stroke-linejoin="miter"></polygon> <polygon fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="27,31 17,31 17,19 23,19 27,23 " stroke-linejoin="miter"></polygon></g>
+							</svg>
+							<h3 class="uk-display-inline-block uk-margin-remove">
+								{{global.footer.sitemap}}
+							</h3>
+
+						<div class="uk-accordion-content uk-padding uk-padding-remove-top">
+							<nav id="footer_nav" class="uk-margin-bottom">
+								<ul class="uk-list  uk-text-small" data-uk-3nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+									{{#each global.mainmenu.items}}
+									<li {{{ternary is_parent 'class="uk-par3ent uk-3open"'}}}>
+										<a itemprop="url" title="{{this.label}}"  {{{ternary new_window 'target="_blank"'}}}
+										href="{{this.link}}">
+										{{this.label}}
+									</a>
+									{{#if is_parent}}
+									<ul class="uk-list uk-list-bullet">
+										{{#each child}}
+										<li>
+											<a title="{{this.label}}"  data-uk-tooltip="pos: left" href="{{this.link}}">
+												{{this.label}}
+											</a>
+										</li>
+										{{/each}}<!-- end each portfolio -->
+									</ul>
+									{{/if}}
+									{{#if is_service}}
+
+									<ul class="uk-margin-remove uk-padding-remove" data-uk-grid>
+										{{#grouped_each 2 services_list}}
+										{{#each this}}
+										<li class="uk-margin-remove uk-margin-small-top uk-padding-remove uk-width-1-2">
+											<h3 class="uk-text-small uk-margin-small-top" style="font-size: 10px; margin-bottom: 5px;">{{label}}:</h3>
+											<ul class="uk-nav uk-navbar-dropdown-nav uk-padding-remove">
+												{{#each topics}}
+												<li><a title="{{this.label}}" href="/{{../language}}/{{../parent_slug}}/{{page_slug}}">
+												<img class="nav-icon" src="{{this.icon}}" alt="{{this.label}} icon" width="16" height="16">
+													&nbsp;&nbsp; &nbsp;
+													<span class="uk-text-primary">
+														{{this.label}}
+													</span>
+												</a>
+											</li>
+											{{/each}}
+										</ul>
+									</li>
+									{{/each}}
+									{{/grouped_each}}
+								</ul>
+								{{/if}}<!-- end if is_service -->
+							</li>
+							{{/each}}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact info -->
+	<section class="uk-width-expand@m uk-width-1-2@s">
+		<div>
+			<div class="uk-card-body2">
+
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" width="32" height="32"><g class="nc-icon-wrapper" fill="#444444" transform="translate(0.5, 0.5)"><line data-cap="butt" data-color="color-2" fill="none" stroke="#444444" stroke-width="1" stroke-miterlimit="10" x1="29" y1="3" x2="14" y2="18" stroke-linejoin="miter" stroke-linecap="butt"></line> <polygon fill="none" stroke="#444444" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="29,3 20,29 14,18 3,12 " stroke-linejoin="miter"></polygon></g>
+					</svg>&nbsp;
+					<h3 class="uk-display-inline-block uk-margin-remove">
+						{{global.footer.contact_info.heading}}
+					</h3>
+
+				<div class="uk-accordion-content uk-padding uk-padding-remove-top">
+					<ul class="uk-list uk-list-divider">
+						<li>
+							<h4 class="uk-margin-small-bottom"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 16 16" xml:space="preserve" width="13" height="13">
+								<g class="nc-icon-wrapper" fill="#5e5e5e">
+									<path fill="#5e5e5e" d="M15.285,12.305l-2.578-2.594c-0.39-0.393-1.025-0.393-1.416-0.002L9,12L4,7l2.294-2.294 c0.39-0.39,0.391-1.023,0.001-1.414l-2.58-2.584C3.324,0.317,2.691,0.317,2.3,0.708L0.004,3.003L0,3c0,7.18,5.82,13,13,13 l2.283-2.283C15.673,13.327,15.674,12.696,15.285,12.305z"></path>
+									<path data-color="color-2" fill="#5e5e5e" d="M16,8h-2c0-3.309-2.691-6-6-6V0C12.411,0,16,3.589,16,8z"></path>
+									<path data-color="color-2" fill="#5e5e5e" d="M12,8h-2c0-1.103-0.897-2-2-2V4C10.206,4,12,5.794,12,8z"></path>
+								</g>
+							</svg>
+							{{global.footer.contact_info.phone.heading}}
+						</h4>
+						<a href="tel:	{{global.footer.contact_info.phone.number}}" class="uk-margin"><span itemprop="telephone">{{global.footer.contact_info.phone.number}}</span></a>
+					</li>
+
+					<li>
+						<h4 class="uk-margin-small-bottom">
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 16 16" xml:space="preserve" width="13" height="13">
+								<g class="nc-icon-wrapper" fill="#5e5e5e">
+									<path data-color="color-2" fill="#5e5e5e" d="M15,1H1C0.4,1,0,1.4,0,2v1.4l8,4.5l8-4.4V2C16,1.4,15.6,1,15,1z"></path>
+									<path fill="#5e5e5e" d="M7.5,9.9L0,5.7V14c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1V5.7L8.5,9.9C8.22,10.04,7.78,10.04,7.5,9.9z"></path>
+								</g>
+							</svg>&nbsp;
+							<span>{{global.footer.contact_info.email.heading}}</span>
+						</h4>
+						<!-- Target -->
+						<a id="email" class="uk-display-inline-block" itemprop="email" href="mailto:{{global.footer.contact_info.email.address}}">{{global.footer.contact_info.email.address}}</a>
+						<!-- Trigger -->
+						<button id="email-copy-btn" class="uk-button uk-button-primary uk-button-small uk-margin-small-right uk-margin-left" data-clipboard-target="#email">
+							<span>{{global.footer.contact_info.email.copy_btn}}</span>&nbsp;
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" width="16" height="16"><g class="nc-icon-wrapper" fill="white"><rect x="2.5" y="3.5" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="10" height="12"></rect> <polyline fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="4.5,0.5 15.5,0.5 15.5,13.5 " data-color="color-2"></polyline> <line fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5.5" y1="6.5" x2="9.5" y2="6.5"></line> <line fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5.5" y1="9.5" x2="9.5" y2="9.5"></line> <line fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5.5" y1="12.5" x2="9.5" y2="12.5"></line></g>
+							</svg>
+						</button>
+						<div class="uk-display-inline-block">&nbsp;
+							<span class="copied">
+								{{global.footer.contact_info.email.copied}}
+							</span>
+						</div>
+					</li>
+
+					<li>
+						<h4 class="uk-margin-small-bottom"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 16 16" xml:space="preserve" width="13" height="13">
+							<g class="nc-icon-wrapper" fill="#5e5e5e">
+								<path fill="#5e5e5e" d="M8,0C4.1,0,1,3.1,1,7c0,1.9,0.7,3.7,2.1,5c0.1,0.1,4.1,3.7,4.2,3.8c0.4,0.3,1,0.3,1.3,0 c0.1-0.1,4.2-3.7,4.2-3.8c1.4-1.3,2.1-3.1,2.1-5C15,3.1,11.9,0,8,0z M8,9C6.9,9,6,8.1,6,7s0.9-2,2-2c1.1,0,2,0.9,2,2S9.1,9,8,9z"></path>
+							</g>
+						</svg>
+						{{global.footer.contact_info.address.heading}}
+					</h4>
+					<address class="uk-margin-remove uk-text-small" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<strong itemprop="name">{{global.footer.contact_info.address.name}}</strong> -
+						<span itemprop="streetAddress">
+							{{global.footer.contact_info.address.streetAddress}}
+						</span>,
+						<span itemprop="addressLocality">
+							{{global.footer.contact_info.address.city}}
+						</span>,
+						<span itemprop="postalCode">
+							{{global.footer.contact_info.address.postalCode}}
+						</span>.
+						<span itemscope itemtype="http://schema.org/Place" class="uk-display-block">
+							<a class="uk-link" title="{{global.footer.contact_info.address.googleMap_btn_text}}" itemprop="hasMap" href="{{global.footer.contact_info.address.googleMap_href}}" target="_blank">
+								{{global.footer.contact_info.address.googleMap_btn_text}}
+							</a>
+						</span>
+					</address>
+					<div itemtype="http://schema.org/GeoCoordinates" itemscope="" itemprop="geo">
+						<meta itemprop="latitude" content="{{global.footer.contact_info.address.latitude}}" />
+						<meta itemprop="longitude" content="{{global.footer.contact_info.address.longitude}}" />
+					</div>
+				</li>
+
+				<li>
+					<h4 class="uk-margin-remove-top uk-margin-remove-bottom">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="13" height="13"><g class="nc-icon-wrapper" fill="#5e5e5e"><path fill="#5e5e5e" d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M19,13h-8V5h2v6h6V13z"></path></g></svg>
+						{{global.footer.contact_info.opening_hours.heading}}
+					</h4>
+					<p class="uk-margin-small  uk-text-small">
+						<span itemprop="openingHours" content="Mo,Tu,We,Th,Fr 09:00-18:00">
+							{{global.footer.contact_info.opening_hours.hours}}
+						</span>
+					</p>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+</div>
+<!-- END grid -->
+
+<!-- copyrights -->
+<div id="copyrights" class="">
+
+
+	<!-- LOGOS -->
+	<div class="uk-flex uk-flex-center uk-flex-middle">
+		<a class="uk-link-reset" href="https://www.endurojs.com/" target="_blank">
+			<img width="121" src="/assets/img/webdesign/logos/enduro-nodejs-cms.png" alt="Enduro.js CMS logo">
+		</a>&nbsp;&nbsp;&nbsp;
+		<a class="uk-link-reset" href="https://getuikit.com/" target="_blank" style="direction: ltr;">
+			<span class="uk-display-inline-block " style="direction: ltr;">
+				<img width="85" src="/assets/img/webdesign/logos/uikit_logo.png" alt="uikit logo">
+			</span>
+		</a>
+	</div>
+
+	<p class="uk-text-center uk-text-small" style="font-size: 12px;">
+		<span>
+			{{{global.footer.copyrights.text}}}
+		</span>
+
+	</p>
+
+</div>
+</div><!--end conatiner -->
+<!-- UP BTN -->
+<div class="uk-hidden2" title="TOP" data-uk-tooltip="pos: top-center">
+	<a href="#" data-uk-scroll="">
+		<div class="wow uk-section uk-section-primary uk-section-small uk-text-center">
+			<div class="uk-button uk-button-default uk-button-large uk-icon">
+				{{global.footer.back_to_top_title}}
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" width="32" height="32"><g class="nc-icon-wrapper" fill="#ffffff" transform="translate(0.5, 0.5)"><polygon fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" points="27,13 24,16 18,10 18,30 14,30 14,10 8,16 5,13 16,2 " transform="translate(0, 0)" stroke-linejoin="miter"></polygon></g></svg>
+			</div>
+		</div>
+	</a>
+</div>
+</footer>

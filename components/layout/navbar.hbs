@@ -1,0 +1,117 @@
+<!-- NAV -->
+
+<nav class="{{{ternary transperent_nav "uk-position-top transperent-nav"}}} st-big-z-index" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<div class="uk-navbar-container uk-navbar-transparent {{{ternary transperent_nav "uk-light2222222222222"}}}"
+	uk-sticky="show-on-up: true; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #scrollup-dropdown">
+	<div class="uk-container2 uk-container-large2">
+		<div class="uk-navbar" data-uk-navbar="dropbar:false; mode: click; delay-hide: 500; boundary-align: false;">
+			<!--LOGO -->
+			<a title="{{global.breadcrumbs_back_to_main}}" class="uk-navbar-item uk-logo uk-visible@m uk-margin-{{global.left_on_rtl_right_on_ltr}} uk-text-primary" href="/{{global.language }}/">
+				<img style="max-height: 97%;" itemprop="logo" src="{{global.logo.src}}"  alt="{{global.company_name}} logo">
+				<span class="uk-hidden" style="color: #3f6089;">
+					{{global.company_name}}
+				</span>
+			</a>
+			<!-- NAV PART I -->
+			<div class="uk-navbar-center2 uk-margin-small-{{global.right_on_rtl_left_on_ltr}}">
+				<ul id="nav-desktop" class="uk-navbar-nav uk-visible@m">
+					{{#each global.mainmenu.items}}
+					<li>
+						<a itemprop="url" title="{{this.label}}" {{{ternary new_window 'target="_blank"'}}}
+						href="{{this.link}}">
+						{{this.label}}
+						<!---dropdown icon 1/2 -->
+						{{#if is_parent}}
+						<svg class="uk-margin-small-right uk-margin-small-left" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve" width="8" height="8"><g class="nc-icon-wrapper" fill="#1e87f0"><path fill="#1e87f0" d="M8,12c-0.232,0-0.463-0.08-0.651-0.241l-7.759-6.65L0.892,3.59L8,9.683l7.108-6.093l1.302,1.519l-7.759,6.65 C8.463,11.92,8.232,12,8,12z"></path></g>
+						</svg>
+						{{/if}}<!-- end if is_parent -->
+						<!---dropdown icon 2/2 -->
+						{{#if is_service}}
+						<svg class="uk-margin-small-right uk-margin-small-left" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve" width="8" height="8"><g class="nc-icon-wrapper" fill="#1e87f0"><path fill="#1e87f0" d="M8,12c-0.232,0-0.463-0.08-0.651-0.241l-7.759-6.65L0.892,3.59L8,9.683l7.108-6.093l1.302,1.519l-7.759,6.65 C8.463,11.92,8.232,12,8,12z"></path></g>
+						</svg>
+						{{/if}}<!-- end if is_service -->
+					</a>
+
+					{{#if is_parent}}
+					<div class="uk-navbar-dropdown uk-padding-small-top uk-navbar-dropdown-width-4">
+						<ul class="uk-nav uk-navbar-dropdown-nav uk-navbar-dropdown-grid uk-grid-small uk-child-width-1-1@m uk-text-center" data-uk-grid>
+							{{#each child}}
+							<li class="uk-display-block ">
+								<a class="uk-inline-clip2 uk-transition-toggle" title="{{this.label}}" itemprop="url" href="{{this.link}}">
+									<div >
+										<img class="uk-transition-scale-up uk-transition-opaque" src="{{this.icon}}" title="{{this.label}}" alt="{{this.label}}">
+									</div>
+									<span class="uk-transition-scale-up uk-transition-opaque uk-display-block uk-h3 uk-text-center uk-text-primary uk-margin-small-top">{{this.label}}</span>
+								</a>
+							</li>
+							{{/each}}<!-- end each parent -->
+						</ul>
+					</div>
+					{{/if}}<!-- end if is_parent -->
+
+					{{#if is_service}}
+					<div class="uk-navbar-dropdown uk-navbar-dropdown-width-3 uk-padding-remove-top">
+						<div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
+							{{#grouped_each 1 services_list}}
+							{{#each this}}
+							<div class="uk-margin-medium-top">
+								<h3 class="uk-text-small" style="font-size: 11px; margin-bottom: 11px;">{{label}}</h3>
+								<ul class="uk-nav uk-navbar-dropdown-nav">
+									{{#each topics}}
+									<li>
+										<a title="{{this.label}}" data-uk-tooltip="pos: bottom"  class="uk-inline-clip2 uk-transition-toggle uk-display-block" itemprop="url" href="/{{../language}}/{{../parent_slug}}/{{page_slug}}">
+											<div uk-grid>
+												<div class="uk-width-expand uk-transition-slide-left-small uk-transition-opaque">
+													{{this.label}}
+												</div>
+												<div class="uk-width-auto uk-transition-slide-left-small  uk-transition-opaque">
+													<img class="nav-icon" src="{{this.icon}}" alt="{{this.label}} icon" width="16" height="16">
+												</div>
+											</div>
+										</a>
+									</li>
+									{{/each}}
+								</ul>
+							</div>
+							{{/each}}
+							{{/grouped_each}}
+						</div>
+					</div>
+					{{/if}}<!-- end if is_service -->
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+
+		<!-- side selecr: r/l/center -->
+		<div class="uk-navbar-{{global.left_on_rtl_right_on_ltr}} uk-visible@m">
+			<ul class="uk-navbar-nav ">
+				<li>
+					<a title="אתר בעברית" data-uk-tooltip id="heb-button" href="/he">עברית</a>
+				</li>
+				<li>
+					<a title="English Version" data-uk-tooltip id="en-button" href="/en">English</a>
+				</li>
+			</ul>
+		</div>
+		<!-- toogle icon visible only on phones -->
+		<div id="toogle" class="uk-navbar-{{global.right_on_rtl_left_on_ltr}}  uk-hidden@m" >
+			<a class="uk-navbar-toggle" href="#" data-uk-toggle="target:#offcanvas-nav-primary;">
+				<span data-uk-navbar-toggle-icon></span>
+				<span class="uk-margin-small-{{global.right_on_rtl_left_on_ltr}}">
+					&nbsp; {{global.menu}}
+				</span>
+			</a>
+		</div>
+		<!-- logo -->
+		<div id="mobile-logo" class="uk-navbar-{{global.left_on_rtl_right_on_ltr}} uk-hidden@m uk-position-absolute uk-position-{{global.left_on_rtl_right_on_ltr}}">
+			<a class="uk-navbar-item uk-logo st-text-light" href="/{{ global.language }}/">
+				<span class="uk-text-small uk-hidden">{{global.company_name}}</span>
+				<img itemprop="logo" src="{{global.logo.src}}"  style="max-width: 180px;" alt="{{global.company_name}} logo">
+			</a>
+		</div>
+		<!-- End of toogle icon visible only on phones -->
+	</div>
+</div>
+</div>
+</nav>

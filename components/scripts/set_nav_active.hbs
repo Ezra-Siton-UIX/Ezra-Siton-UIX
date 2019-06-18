@@ -1,0 +1,75 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	// Active state
+
+	// Set lan buttons - מסדר שזה מחליף כתובת בלחיצה
+	currentPath = window.location.pathname;
+	let englishhPath =  currentPath.replace(/he/, "en");
+	let hebrewPath = currentPath.replace(/en/, "he");
+
+	document.getElementById('heb-button').href = hebrewPath;
+	document.getElementById('en-button').href = englishhPath;
+	document.getElementById('off-canvas-heb-button').href = hebrewPath;
+	document.getElementById('off-canvas-en-button').href = englishhPath;
+
+
+	function setActiveNavDesktop() {
+		aObj = document.getElementById('nav-desktop').getElementsByTagName('a');
+		currentPath = window.location.pathname;
+		let currentPathWithOutSlash = currentPath.slice(0, -1); // "12345.0
+		for(i=0;i<aObj.length;i++) {
+		if(aObj[i].getAttribute('href') == currentPath || aObj[i].getAttribute('href') == currentPathWithOutSlash && aObj[i].parentElement.tagName == 'LI') {
+				aObj[i].parentElement.className='uk-active uk-text-bold';
+			}
+		}
+	}
+	// Active state OffCanvas
+	function setActiveOffCanvas() {
+		aObj = document.getElementById('nav-mobile').getElementsByTagName('a');
+		currentPath = window.location.pathname;
+		let currentPathWithOutSlash = currentPath.slice(0, -1); // "12345.0
+		for(i=0;i<aObj.length;i++) {
+		if(aObj[i].getAttribute('href') == currentPath || aObj[i].getAttribute('href') == currentPathWithOutSlash && aObj[i].parentElement.tagName == 'LI') {
+
+				aObj[i].parentElement.className='uk-active uk-text-primary uk-text-bold';
+			}
+		}
+	}
+	// Active state Footer - Desktop
+	function setFooterDesktopNavActive() {
+		aObj = document.getElementById('footer_nav').getElementsByTagName('a');
+		let currentPath = window.location.pathname;
+		let currentPathWithOutSlash = currentPath.slice(0, -1); // "12345.0
+		for(i=0;i<aObj.length;i++) {
+			if(aObj[i].getAttribute('href') == currentPath || aObj[i].getAttribute('href') == currentPathWithOutSlash && aObj[i].parentElement.tagName == 'LI') {
+				aObj[i].parentElement.className='pure-menu-item  uk-active uk-text-bold';
+			}
+		}
+	}
+
+	/* Active state Footer - mobile
+	function setFooterMobileNavActive() {
+		aObj = document.getElementById('mobile_footer_nav').getElementsByTagName('a');
+		let currentPath = window.location.pathname;
+		let currentPathWithOutSlash = currentPath.slice(0, -1); // "12345.0
+		for(i=0;i<aObj.length;i++) {
+			if(aObj[i].getAttribute('href') == currentPath || aObj[i].getAttribute('href') == currentPathWithOutSlash && aObj[i].parentElement.tagName == 'LI') {
+				aObj[i].parentElement.className='pure-menu-item  uk-active uk-text-bold';
+			}
+		}
+	}*/
+
+
+	setActiveNavDesktop();
+	setActiveOffCanvas();
+	setFooterDesktopNavActive();
+	// setFooterMobileNavActive();
+
+
+});
+
+
+
+
+
+</script>

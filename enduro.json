@@ -1,0 +1,13 @@
+{
+	"project_name": "enduro_intro",
+	"project_slug": "ei",
+	"bricks": {
+		"enduro_quill": {
+			"theme": "snow"
+		}
+	},
+	"cultures": [
+		"he",
+		"en"
+	]
+}

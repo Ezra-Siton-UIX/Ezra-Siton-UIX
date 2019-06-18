@@ -1,0 +1,66 @@
+{{>head}}
+<!--plugins-->
+
+</head>
+<body id="WOW">
+  {{#>body}}
+  {{>inside_header}}
+ <div style="min-height: 100vh;">
+
+ 
+ <div class="uk-section">
+ <main id="main" class="uk-container uk-container-small" style="padding-top: 40px; margin-top: -40px;">
+ 
+{{#if rtl}}
+  {{#blog}}
+    {{#each this}}
+        <article>
+            <h2>{{blog_entry.blog_title}}</h2>
+            <p>{{{blog_entry.seo.seo_description}}}</p>
+            <a href="/he/blog/{{page_slug}}">Read more...</a>
+			
+        </article>
+    {{/each}}
+{{/blog}}
+{{else}}
+
+  {{#blog}}
+    {{#each this}}
+        <article>
+            <h2>{{blog_entry.blog_title}}</h2>
+            <p>{{{blog_entry.seo.seo_description}}}</p>
+            <a href="/en/blog/{{page_slug}}">Read more...</a>
+			
+        </article>
+    {{/each}}
+{{/blog}}
+
+ {{/if}}
+
+
+</main>
+
+
+   
+
+
+
+
+</div>
+
+  </div>
+  <!-- footer -->
+  {{>footer}}
+  <!-- scripts -->
+  {{>uikit}}
+
+  <!-- initialize -->
+  <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+
+
+  });
+
+
+  </script>
+  {{/body}}<!-- הסוגר של זה בטמפלט של בודי -->

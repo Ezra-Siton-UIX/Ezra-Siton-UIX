@@ -1,0 +1,16 @@
+
+<nav id="" class="uk-hidden@m uk-container uk-container-large uk-section-primary uk-light" style="overflow: hidden; overflow-x:hidden; overflow-y:hidden;">
+  <div class="pure-menu pure-menu-horizontal pure-menu-scrollable" >
+    <ul id="services-scroll-nav" class="pure-menu-list uk-subnav uk-subnav-divid uk-margin-remove">
+      {{#each global.mainmenu.items.[3].services_list}}
+        {{#each topics}}
+          <li class="pure-menu-item ">
+            <a class="uk-text-center" href="/{{../language}}/{{../parent_slug}}/{{page_slug}}">
+              {{this.label}}
+            </a>
+            </li>
+        {{/each}}
+      {{/each}}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,42 @@
+
+
+{{>head}}
+<!--plugins-->
+
+</head>
+<body id="WOW">
+  {{#>body}}
+  {{>inside_header}}
+ <div style="min-height: 100vh;">
+ 
+ <div class="uk-section">
+ <main id="main" class="uk-container uk-container-small" style="padding-top: 40px; margin-top: -40px;">
+ 
+ 
+<article class="uk-article">
+    <h1>{{blog_title}}</h1>
+	<p class="uk-article-meta">Written by <a href="#">Super User</a> on 12 April 2012. Posted in <a href="#">Blog</a></p>
+	<p class="uk-text-lead">{{blog_lead}}</p>
+    <p>{{blog_text}}</p>
+</article>
+
+</main>
+</div>
+
+
+  </div>
+  <!-- footer -->
+  {{>footer}}
+  <!-- scripts -->
+  {{>uikit}}
+
+  <!-- initialize -->
+  <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+
+
+  });
+
+
+  </script>
+  {{/body}}<!-- הסוגר של זה בטמפלט של בודי -->

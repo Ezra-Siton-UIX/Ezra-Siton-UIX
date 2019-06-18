@@ -1,0 +1,292 @@
+<style>
+/*!
+Pure v1.0.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+
+/* scrollable menus */
+.pure-menu-scrollable {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.pure-menu-scrollable .pure-menu-list {
+	display: block;
+}
+
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+	display: inline-block;
+}
+
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+	display: none;
+}
+
+/* HORIZONTAL MENU */
+.pure-menu-horizontal {
+	width: 100%;
+	white-space: nowrap;
+}
+.pure-menu-horizontal .pure-menu-list {
+	display: inline-block;
+}
+/* Initial menus should be inline-block so that they are horizontal */
+.pure-menu-horizontal .pure-menu-item,
+.pure-menu-horizontal .pure-menu-heading,
+.pure-menu-horizontal .pure-menu-separator {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+}
+/* scrollable menus */
+.pure-menu-scrollable {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.pure-menu-scrollable .pure-menu-list {
+	display: block;
+}
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+	display: inline-block;
+}
+.pure-menu-horizontal.pure-menu-scrollable {
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+	-ms-overflow-style: none;
+	-webkit-overflow-scrolling: touch;
+	/* a little extra padding for this style to allow for scrollbars */
+	padding: 0.5em 0;
+}
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+	display: none;
+}
+
+/* 1-4 -- FIX THE RTL PROBLEM */
+html[dir="rtl"] .fancybox-stage {
+	direction: inherit;
+}
+html[dir="rtl"] .fancybox-slide > * {
+	text-align: initial;
+}
+/* 2-4 -- FIX Caption Decleration */
+html[dir="rtl"] .fancybox-caption-wrap{
+	direction: inherit;
+}
+
+/* 3-4 -- FIX Container Override Font Decleration */
+.fancybox-container {
+	font-family: inherit;
+}
+
+/* 4-4 - FIX X button */
+html[dir="rtl"] .fancybox-close-small{
+	left: 0;
+	right: initial;
+}
+
+
+</style>
+
+
+
+{{>inside_header}}
+{{>services_scrolable_menu}}
+
+
+<!-- Breadcrumb -->
+<div class="uk-margin-medium-bottom2 uk-visible3@m" style="background:rgba(255,255,255, 0.95); padding: 3px 0;">
+	<nav class="uk-container uk-container-large "  itemprop="breadcrumb"  >
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="uk-breadcrumb uk-margin-small-top">
+			<li itemprop="itemListElement" itemscope	itemtype="http://schema.org/ListItem">
+				<a itemscope itemtype="http://schema.org/Thing" itemprop="item"  href="/{{global.language}}" data-uk-tooltip="pos: bottom" title="{{global.breadcrumbs_back_to_main}}">
+					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24">
+						<g class="nc-icon-wrapper" fill="#999999">
+							<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+						</g>
+					</svg>
+					<span itemprop="name">
+						{{global.home_label_name}}
+					</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/{{global.language}}/services-page-list/" data-uk-tooltip="pos: bottom" title="{{seo.parent_page_name}}">
+					<span itemprop="name">
+						{{seo.parent_page_name}}
+					</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<span itemscope itemtype="http://schema.org/Thing" itemprop="item">
+					<span itemprop="name">
+						{{seo.title}}
+					</span>
+				</span>
+				<meta itemprop="position" content="3" />
+			</li>
+		</ol>
+	</nav>
+</div>
+
+<main id="main" itemscope itemtype="http://schema.org/Service"class="uk-padding-top"  style="min-height: 100vh; padding-top: 50px;" data-uk-height-viewport>
+	<div class="uk-container uk-container-large">
+		<div class="uk-grid-large uk-child-width-expand@s" data-uk-grid>
+			<section>
+				<div id="icon" class="uk-text-center uk-text-{{global.right_on_rtl_left_on_ltr}}@m">
+					{{#if about.logo.is_logo}}
+					<img style="max-width: 60%" src="{{about.logo.src}}" alt="{{about.logo.src}}" data-uk-scrollspy="cls: uk-animation-slide-{{global.right_on_rtl_left_on_ltr}}-medium;  offset-top: -200">
+					{{/if}}
+					{{#if about.icon.is_svg}}
+					<div id="icon"  data-uk-scrollspy="cls: uk-animation-slide-{{global.right_on_rtl_left_on_ltr}}-medium;  offset-top: -200">
+						{{{about.icon.svg}}}
+					</div>
+					{{/if}}
+				</div>
+
+				<h2 class="uk-heading-line uk-margin-top uk-text-center uk-text-{{global.right_on_rtl_left_on_ltr}}@m" itemprop="serviceType">
+					<span>{{about.heading}}</span>
+				</h2>
+				<div itemprop="description">
+					{{{richtext.content}}}
+				</div>
+
+				<div class="uk-hidden@m" data-uk-scrollspy="cls:uk-animation-fade; target: > img; offset-top: -200">
+					{{#each images.list}}
+					<a data-type="image" data-fancybox="gallery-on-mobile" itemprop="thumbnail" href="{{this.src}}">
+						<div class="uk-inline-clip uk-transition-toggle uk-margin-small-bottom">
+							<img class="uk-transition-scale-up uk-transition-opaque" src="{{this.src}}" alt="{{this.alt}}">
+						</div>
+					</a>
+					{{/each}}<!-- end each service -->
+				</div>
+
+				<h2 class="uk-heading-bullet">{{features.heading}}</h2>
+				<ul class="uk-list uk-list-large uk-list-striped2 uk-list-divider uk-margin-remove-top" data-uk-scrollspy="target: > li; cls: uk-animation-slide-{{global.right_on_rtl_left_on_ltr}}-small;  delay: 50; offset-top: -50">
+					{{#each features.list}}
+					<li class="">
+						<div class="uk-grid-small uk-flex uk-flex-middle" uk-grid>
+							<div class="icon uk-width-auto">
+								{{{this.svg}}}
+							</div>
+							<div class="uk-width-expand">
+								<h3 class="uk-display-inline2-block uk-text-bold uk-h4">{{this.heading}}</h3>
+								{{this.text}}
+							</div>
+						</div>
+					</li>
+					{{/each}}
+				</ul>
+
+				{{#if youtube.is_youtube}}
+				<h3 class="uk-heading-bullet">{{global.videos_text}}</h3>
+				{{#each youtube.list}}
+				<div class='embed-container uk-margin-top'>
+					<iframe height="550" width="auto"  src="{{this.src}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+				</div>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" width="16" height="16"><g class="nc-icon-wrapper" fill="#a0a0a0"><path fill="#a0a0a0" d="M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M8,14c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6 S11.3,14,8,14z"></path> <polygon data-color="color-2" fill="#a0a0a0" points="9,4 7,4 7,9 12,9 12,7 9,7 "></polygon></g></svg>
+				<time class="uk-text-small">{{this.length}}</time>
+				{{/each}}
+				{{/if}}
+
+				{{#if button.is_button}}
+				<div class="uk-margin-large-top">
+					<span id="link-icon" style="position:relative; bottom: 5px;">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" width="32" height="32"><g class="nc-icon-wrapper" fill="#444444"><rect x="3" y="1" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="26" height="30" stroke-linejoin="miter"></rect> <path data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d=" M16.707,9.636L16.707,9.636c1.562-1.562,4.095-1.562,5.657,0l0,0c1.562,1.562,1.562,4.095,0,5.657l-2.121,2.121 c-1.562,1.562-4.095,1.562-5.657,0l0,0" stroke-linejoin="miter"></path> <path data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d=" M15.293,22.364L15.293,22.364c-1.562,1.562-4.095,1.562-5.657,0l0,0c-1.562-1.562-1.562-4.095,0-5.657l2.121-2.121 c1.562-1.562,4.095-1.562,5.657,0l0,0" stroke-linejoin="miter"></path> ,/g></g></svg>
+					</span>
+					<h2 class="uk-margin-remove-top uk-display-inline-block uk-margin-small-{{global.right_on_rtl_left_on_ltr}}">{{button.heading}}</h2>
+					<p>
+						{{#each button.list}}
+						<a title="{{this.text}}" href="{{this.url}}" class="uk-button uk-button-primary uk-margin-small-bottom" {{{ternary new_window 'target="_blank"'}}}>
+							{{this.text}}
+						</a>&nbsp;
+						{{/each}}
+					</p>
+				</div>
+				{{/if}}<!-- end buttons -->
+			</section>
+
+			<!-- left col -->
+			<div class="uk-visible@m" data-uk-scrollspy="target: > a div; cls: uk-animation-slide-{{global.left_on_rtl_right_on_ltr}}-medium; offset-top: -200">
+				{{#each images.list}}
+				<a data-type="image" data-fancybox="gallery-on-desktop" itemprop="thumbnail" href="{{this.src}}">
+					<div class="uk-inline-clip uk-transition-toggle uk-margin-small-bottom" style="border: 1px solid #efefef;">
+						<img class="uk-transition-scale-up uk-transition-opaque" src="{{this.src}}" alt="{{this.alt}}">
+					</div>
+				</a>
+				{{/each}}<!-- end each service -->
+			</div>
+		</div><!-- end grid -->
+	</div><!-- end container -->
+</main>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<aside class="uk-section uk-section-muted uk-margin-large-top">
+	<div class="uk-container uk-container-large">
+		<h2 class="uk-heading-divider">{{global.all_services_button_text}}</h2>
+		<br>
+		{{>services_pagelist}}
+	</div>
+</aside>
+
+<!-- להשאיר פה זה רלוונטי רק לדף הזה -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	/* 1 */
+	// Active state scrollable area
+	function setActiveServicesPageListScrollableNav() {
+		aObj = document.getElementById('services_pagelist').getElementsByTagName('a');
+		let currentPath = window.location.pathname;
+		let currentPathWithOutSlash = currentPath.slice(0, -1); // "12345.0
+		for(i=0;i<aObj.length;i++) {
+			if(aObj[i].getAttribute('href') == currentPath || aObj[i].getAttribute('href') == currentPathWithOutSlash && aObj[i].parentElement.tagName == 'LI') {
+				aObj[i].parentElement.className='uk-text-large  uk-text-bold uk-active';
+			}
+		}
+	};
+	setActiveServicesPageListScrollableNav();
+
+	/* 2 */
+	// Active state service list area
+	function setActiveServicesScrollableNav() {
+		aObj = document.getElementById('services-scroll-nav').getElementsByTagName('a');
+		let currentPath = window.location.pathname;
+		let currentPathWithOutSlash = currentPath.slice(0, -1); // "12345.0
+		for(i=0;i<aObj.length;i++) {
+			if(aObj[i].getAttribute('href') == currentPath || aObj[i].getAttribute('href') == currentPathWithOutSlash && aObj[i].parentElement.tagName == 'LI') {
+				aObj[i].parentElement.className='pure-menu-item  uk-text-bold uk-active';
+			}
+		}
+	};
+	setActiveServicesScrollableNav();
+
+	// Active state dropdown Parent - רלוונטי רק למסך זה
+	function setActiveServiceNavParent() {
+		aObj = document.getElementById('nav-desktop').getElementsByTagName('a');
+		let currentPath = window.location.pathname;
+		let currentPathWithOutSlash = currentPath.slice(0, -1); // "12345.0
+		for(i=0;i<aObj.length;i++) {
+			if(aObj[i].getAttribute('href') == currentPath || aObj[i].getAttribute('href') == currentPathWithOutSlash && aObj[i].parentElement.tagName == 'LI') {
+				aObj[i].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.className='pure-menu-item uk-text-bold uk-active';
+			}
+		}
+	};
+	setActiveServiceNavParent();
+
+
+
+});
+
+</script>
