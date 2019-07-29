@@ -12,7 +12,7 @@
 		"bluebird": "^3.5.1",
 		"enduro": "*",
 		"enduro_quill": "^1.0.6",
-		"lodash": "^4.17.5",
+		"lodash": "^4.17.13",
 		"npm": "^6.4.1"
 	},
 	"devDependencies": {
