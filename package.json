@@ -13,7 +13,7 @@
 		"enduro": "*",
 		"enduro_quill": "^1.0.6",
 		"lodash": "^4.17.5",
-		"npm": "^6.4.1"
+		"npm": "^6.13.4"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
